@@ -1,16 +1,19 @@
-# ahmad_tuflihun_mobile_dev_test_fast_eight
-
-Developer Test Ahmad Tuflihun
-
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+### pub get
 
-A few resources to get you started if this is your first Flutter project:
+```bash
+flutter pub get
+```
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Running Build Runner
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```bash
+dart run build_runner build
+```
+
+### APK Build
+
+```bash
+flutter build apk --target-platform android-arm,android-arm64,android-x64
+```
