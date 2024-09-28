@@ -66,9 +66,14 @@ class AppTextStyles {
   );
 
   static var appBarSubTitle = poppins.copyWith(
-    fontSize: 20.0,
-    fontWeight: FontWeight.w400,
+    fontSize: 22.0,
+    fontWeight: FontWeight.bold,
     color: Colors.white,
+  );
+
+  static var price = poppins.copyWith(
+    fontSize: 14.0,
+    color: Colors.black
   );
 
 }

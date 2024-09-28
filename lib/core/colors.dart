@@ -9,4 +9,5 @@ class AppColors {
   static var redButton = Colors.red.withOpacity(0.65);
   static var greenButton = const Color(0xFF71D769).withOpacity(0.65);
   static var red65 = const Color(0xFFFF0000).withOpacity(0.65);
+  static var red = const Color(0xFFB30000);
 }

@@ -28,6 +28,9 @@ class $AssetsSvgsGen {
   /// File path: assets/svgs/brain.svg
   String get brain => 'assets/svgs/brain.svg';
 
+  /// File path: assets/svgs/business.svg
+  String get business => 'assets/svgs/business.svg';
+
   /// File path: assets/svgs/car.svg
   String get car => 'assets/svgs/car.svg';
 
@@ -36,9 +39,6 @@ class $AssetsSvgsGen {
 
   /// File path: assets/svgs/chat.svg
   String get chat => 'assets/svgs/chat.svg';
-
-  /// File path: assets/svgs/finance.svg
-  String get finance => 'assets/svgs/finance.svg';
 
   /// File path: assets/svgs/health.svg
   String get health => 'assets/svgs/health.svg';
@@ -49,9 +49,6 @@ class $AssetsSvgsGen {
   /// File path: assets/svgs/home.svg
   String get home => 'assets/svgs/home.svg';
 
-  /// File path: assets/svgs/kabaa.svg
-  String get kabaa => 'assets/svgs/kabaa.svg';
-
   /// File path: assets/svgs/mask.svg
   String get mask => 'assets/svgs/mask.svg';
 
@@ -61,6 +58,9 @@ class $AssetsSvgsGen {
   /// File path: assets/svgs/muslim.svg
   String get muslim => 'assets/svgs/muslim.svg';
 
+  /// File path: assets/svgs/note.svg
+  String get note => 'assets/svgs/note.svg';
+
   /// File path: assets/svgs/people.svg
   String get people => 'assets/svgs/people.svg';
 
@@ -68,17 +68,17 @@ class $AssetsSvgsGen {
   List<String> get values => [
         all,
         brain,
+        business,
         car,
         card,
         chat,
-        finance,
         health,
         hobby,
         home,
-        kabaa,
         mask,
         merch,
         muslim,
+        note,
         people
       ];
 }

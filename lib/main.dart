@@ -27,8 +27,21 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         title: Strings.appName,
         routes: Routes.getRoutes(),
-        theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.yellow),
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData.light().copyWith(
+          primaryColor: AppColors.primaryColor,
+          inputDecorationTheme: defaultInputTheme,
+          textSelectionTheme: const TextSelectionThemeData(
+            selectionColor: AppColors.primaryColor,
+            cursorColor: AppColors.primaryColor,
+          ),
+          cardTheme: const CardTheme(
+            color: AppColors.primaryColor,
+            surfaceTintColor: Colors.black,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.all(Radius.circular(8.0)),
+            ),
+          ),
           buttonTheme: const ButtonThemeData(
             buttonColor: AppColors.primaryColor,
             textTheme: ButtonTextTheme.primary,

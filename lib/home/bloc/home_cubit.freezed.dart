@@ -21,7 +21,7 @@ mixin _$HomeState {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(String title) update,
-    required TResult Function(List<Product> products, dynamic switchValue)
+    required TResult Function(List<ProductMdl> products, dynamic switchValue)
         success,
   }) =>
       throw _privateConstructorUsedError;
@@ -30,7 +30,7 @@ mixin _$HomeState {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(String title)? update,
-    TResult? Function(List<Product> products, dynamic switchValue)? success,
+    TResult? Function(List<ProductMdl> products, dynamic switchValue)? success,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -38,7 +38,7 @@ mixin _$HomeState {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(String title)? update,
-    TResult Function(List<Product> products, dynamic switchValue)? success,
+    TResult Function(List<ProductMdl> products, dynamic switchValue)? success,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -133,7 +133,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(String title) update,
-    required TResult Function(List<Product> products, dynamic switchValue)
+    required TResult Function(List<ProductMdl> products, dynamic switchValue)
         success,
   }) {
     return initial();
@@ -145,7 +145,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(String title)? update,
-    TResult? Function(List<Product> products, dynamic switchValue)? success,
+    TResult? Function(List<ProductMdl> products, dynamic switchValue)? success,
   }) {
     return initial?.call();
   }
@@ -156,7 +156,7 @@ class _$InitialImpl implements _Initial {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(String title)? update,
-    TResult Function(List<Product> products, dynamic switchValue)? success,
+    TResult Function(List<ProductMdl> products, dynamic switchValue)? success,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -251,7 +251,7 @@ class _$LoadingImpl implements _Loading {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(String title) update,
-    required TResult Function(List<Product> products, dynamic switchValue)
+    required TResult Function(List<ProductMdl> products, dynamic switchValue)
         success,
   }) {
     return loading();
@@ -263,7 +263,7 @@ class _$LoadingImpl implements _Loading {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(String title)? update,
-    TResult? Function(List<Product> products, dynamic switchValue)? success,
+    TResult? Function(List<ProductMdl> products, dynamic switchValue)? success,
   }) {
     return loading?.call();
   }
@@ -274,7 +274,7 @@ class _$LoadingImpl implements _Loading {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(String title)? update,
-    TResult Function(List<Product> products, dynamic switchValue)? success,
+    TResult Function(List<ProductMdl> products, dynamic switchValue)? success,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -396,7 +396,7 @@ class _$UpdateImpl implements _Update {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(String title) update,
-    required TResult Function(List<Product> products, dynamic switchValue)
+    required TResult Function(List<ProductMdl> products, dynamic switchValue)
         success,
   }) {
     return update(title);
@@ -408,7 +408,7 @@ class _$UpdateImpl implements _Update {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(String title)? update,
-    TResult? Function(List<Product> products, dynamic switchValue)? success,
+    TResult? Function(List<ProductMdl> products, dynamic switchValue)? success,
   }) {
     return update?.call(title);
   }
@@ -419,7 +419,7 @@ class _$UpdateImpl implements _Update {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(String title)? update,
-    TResult Function(List<Product> products, dynamic switchValue)? success,
+    TResult Function(List<ProductMdl> products, dynamic switchValue)? success,
     required TResult orElse(),
   }) {
     if (update != null) {
@@ -484,7 +484,7 @@ abstract class _$$SuccessImplCopyWith<$Res> {
           _$SuccessImpl value, $Res Function(_$SuccessImpl) then) =
       __$$SuccessImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({List<Product> products, dynamic switchValue});
+  $Res call({List<ProductMdl> products, dynamic switchValue});
 }
 
 /// @nodoc
@@ -507,7 +507,7 @@ class __$$SuccessImplCopyWithImpl<$Res>
       products: null == products
           ? _value._products
           : products // ignore: cast_nullable_to_non_nullable
-              as List<Product>,
+              as List<ProductMdl>,
       switchValue: freezed == switchValue ? _value.switchValue! : switchValue,
     ));
   }
@@ -517,13 +517,13 @@ class __$$SuccessImplCopyWithImpl<$Res>
 
 class _$SuccessImpl implements _Success {
   const _$SuccessImpl(
-      {final List<Product> products = const [], this.switchValue = 0})
+      {final List<ProductMdl> products = const [], this.switchValue = 0})
       : _products = products;
 
-  final List<Product> _products;
+  final List<ProductMdl> _products;
   @override
   @JsonKey()
-  List<Product> get products {
+  List<ProductMdl> get products {
     if (_products is EqualUnmodifiableListView) return _products;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_products);
@@ -568,7 +568,7 @@ class _$SuccessImpl implements _Success {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(String title) update,
-    required TResult Function(List<Product> products, dynamic switchValue)
+    required TResult Function(List<ProductMdl> products, dynamic switchValue)
         success,
   }) {
     return success(products, switchValue);
@@ -580,7 +580,7 @@ class _$SuccessImpl implements _Success {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(String title)? update,
-    TResult? Function(List<Product> products, dynamic switchValue)? success,
+    TResult? Function(List<ProductMdl> products, dynamic switchValue)? success,
   }) {
     return success?.call(products, switchValue);
   }
@@ -591,7 +591,7 @@ class _$SuccessImpl implements _Success {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(String title)? update,
-    TResult Function(List<Product> products, dynamic switchValue)? success,
+    TResult Function(List<ProductMdl> products, dynamic switchValue)? success,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -640,10 +640,10 @@ class _$SuccessImpl implements _Success {
 
 abstract class _Success implements HomeState {
   const factory _Success(
-      {final List<Product> products,
+      {final List<ProductMdl> products,
       final dynamic switchValue}) = _$SuccessImpl;
 
-  List<Product> get products;
+  List<ProductMdl> get products;
   dynamic get switchValue;
 
   /// Create a copy of HomeState

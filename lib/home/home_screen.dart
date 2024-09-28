@@ -14,16 +14,35 @@ class HomeScreen extends StatelessWidget {
         title: context.read<AppBarCubit>().title,
         subTitle: context.read<AppBarCubit>().subTitle,
         actions: [
-          InkWell(
-            borderRadius: BorderRadius.circular(32.0),
-            onTap: () {},
-            child: const Padding(
-              padding: EdgeInsets.all(8.0),
-              child: Icon(
-                Icons.notifications_none_outlined,
-                color: Colors.white,
+          Stack(
+            children: [
+              InkWell(
+                borderRadius: BorderRadius.circular(32.0),
+                onTap: () {},
+                child: const Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: Icon(
+                    Icons.notifications_none_outlined,
+                    color: Colors.white,
+                  ),
+                ),
               ),
-            ),
+              Positioned(
+                right: 4,
+                child: CircleAvatar(
+                  radius: 8.0,
+                  backgroundColor: AppColors.red,
+                  child: Text(
+                    '0',
+                    textAlign: TextAlign.center,
+                    style: AppTextStyles.small.copyWith(
+                      fontSize: 10,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ),
+            ],
           ),
           const SizedBox(width: 8.0),
           CircleAvatar(

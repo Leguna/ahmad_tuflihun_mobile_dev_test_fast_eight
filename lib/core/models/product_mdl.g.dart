@@ -6,20 +6,22 @@ part of 'product_mdl.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$ProductImpl _$$ProductImplFromJson(Map<String, dynamic> json) =>
-    _$ProductImpl(
-      id: json['id'] as String?,
-      name: json['name'] as String?,
-      price: (json['price'] as num?)?.toInt(),
+_$ProductMdlImpl _$$ProductMdlImplFromJson(Map<String, dynamic> json) =>
+    _$ProductMdlImpl(
+      id: json['id'] as String? ?? '',
+      name: json['name'] as String? ?? '',
+      price: (json['price'] as num?)?.toInt() ?? 0,
       categories: (json['categories'] as List<dynamic>?)
-          ?.map((e) => e as String)
-          .toList(),
-      tag: json['tag'] as String?,
-      description: json['description'] as String?,
-      image: json['image'] as String?,
+              ?.map((e) => e as String)
+              .toList() ??
+          const [],
+      tag: json['tag'] as String? ?? '',
+      description: json['description'] as String? ?? '',
+      image: json['image'] as String? ?? '',
+      discount: (json['discount'] as num?)?.toDouble() ?? 0.0,
     );
 
-Map<String, dynamic> _$$ProductImplToJson(_$ProductImpl instance) =>
+Map<String, dynamic> _$$ProductMdlImplToJson(_$ProductMdlImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'name': instance.name,
@@ -28,4 +30,5 @@ Map<String, dynamic> _$$ProductImplToJson(_$ProductImpl instance) =>
       'tag': instance.tag,
       'description': instance.description,
       'image': instance.image,
+      'discount': instance.discount,
     };

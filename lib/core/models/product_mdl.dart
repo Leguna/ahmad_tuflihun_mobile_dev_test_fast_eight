@@ -1,26 +1,20 @@
-import 'dart:convert';
-
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'product_mdl.freezed.dart';
 part 'product_mdl.g.dart';
 
 @freezed
-class Product with _$Product {
-  const factory Product({
-    String? id,
-    String? name,
-    int? price,
-    List<String>? categories,
-    String? tag,
-    String? description,
-    String? image,
-  }) = _Product;
+class ProductMdl with _$ProductMdl {
+  const factory ProductMdl({
+    @Default('') String? id,
+    @Default('') String? name,
+    @Default(0) int? price,
+    @Default([]) List<String>? categories,
+    @Default('') String? tag,
+    @Default('') String? description,
+    @Default('') String? image,
+    @Default(0.0) double? discount,
+  }) = _ProductMdl;
 
-  factory Product.fromJson(Map<String, dynamic> json) =>
-      _$ProductFromJson(json);
-
-  factory Product.fromJsonString(String jsonString) =>
-      _$ProductFromJson(json.decode(jsonString));
-
+  factory ProductMdl.fromJson(Map<String, dynamic> json) => _$ProductMdlFromJson(json);
 }

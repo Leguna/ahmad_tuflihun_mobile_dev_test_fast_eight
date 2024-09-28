@@ -22,6 +22,6 @@ class AppBarCubit extends Cubit<AppBarState> {
     }
   }
 
-  String title = Strings.appName;
-  String subTitle = Strings.selamatPagi;
+  String title = Strings.selamatPagi;
+  String subTitle = Strings.appName;
 }
