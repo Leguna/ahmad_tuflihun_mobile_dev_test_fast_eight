@@ -1,5 +1,5 @@
 import 'package:ahmad_tuflihun_mobile_dev_test_fast_eight/core/models/index.dart';
-import 'package:flutter/widgets.dart';
+import 'package:flutter/material.dart';
 
 import 'product_item_widget.dart';
 
@@ -10,8 +10,7 @@ class ProductListWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Grid 2 Column
-    return GridView.builder(
+    return GridView(
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -20,10 +19,14 @@ class ProductListWidget extends StatelessWidget {
         childAspectRatio: 0.8,
         mainAxisSpacing: 12.0,
       ),
-      itemCount: products.length,
-      itemBuilder: (context, index) {
-        return ProductItemWidget(product: products[index]);
-      },
+      children: products
+          .map(
+            (product) => Container(
+              alignment: Alignment.center,
+              child: ProductItemWidget(product: product),
+            ),
+          )
+          .toList(),
     );
   }
 }

@@ -1,5 +1,6 @@
 import 'package:ahmad_tuflihun_mobile_dev_test_fast_eight/home/bloc/home_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 import '../core/index.dart';
 import 'explore_wellness_widget.dart';
@@ -11,8 +12,10 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocConsumer<HomeCubit, HomeState>(
-      listener: (context, state) {},
+    final homeCubit = context.read<HomeCubit>();
+    homeCubit.refreshController = RefreshController();
+    // TODO: Add pull to refresh
+    return BlocBuilder<HomeCubit, HomeState>(
       builder: (context, state) {
         return SingleChildScrollView(
           child: ConstrainedBox(

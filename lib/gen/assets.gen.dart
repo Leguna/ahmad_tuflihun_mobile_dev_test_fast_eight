@@ -25,6 +25,9 @@ class $AssetsSvgsGen {
   /// File path: assets/svgs/all.svg
   String get all => 'assets/svgs/all.svg';
 
+  /// File path: assets/svgs/boxcheck.svg
+  String get boxcheck => 'assets/svgs/boxcheck.svg';
+
   /// File path: assets/svgs/brain.svg
   String get brain => 'assets/svgs/brain.svg';
 
@@ -37,8 +40,17 @@ class $AssetsSvgsGen {
   /// File path: assets/svgs/card.svg
   String get card => 'assets/svgs/card.svg';
 
+  /// File path: assets/svgs/cartplus.svg
+  String get cartplus => 'assets/svgs/cartplus.svg';
+
   /// File path: assets/svgs/chat.svg
   String get chat => 'assets/svgs/chat.svg';
+
+  /// File path: assets/svgs/finance-coporate.svg
+  String get financeCoporate => 'assets/svgs/finance-coporate.svg';
+
+  /// File path: assets/svgs/friend.svg
+  String get friend => 'assets/svgs/friend.svg';
 
   /// File path: assets/svgs/health.svg
   String get health => 'assets/svgs/health.svg';
@@ -48,6 +60,12 @@ class $AssetsSvgsGen {
 
   /// File path: assets/svgs/home.svg
   String get home => 'assets/svgs/home.svg';
+
+  /// File path: assets/svgs/homepage.svg
+  String get homepage => 'assets/svgs/homepage.svg';
+
+  /// File path: assets/svgs/mappin.svg
+  String get mappin => 'assets/svgs/mappin.svg';
 
   /// File path: assets/svgs/mask.svg
   String get mask => 'assets/svgs/mask.svg';
@@ -64,22 +82,36 @@ class $AssetsSvgsGen {
   /// File path: assets/svgs/people.svg
   String get people => 'assets/svgs/people.svg';
 
+  /// File path: assets/svgs/search.svg
+  String get search => 'assets/svgs/search.svg';
+
+  /// File path: assets/svgs/voucher.svg
+  String get voucher => 'assets/svgs/voucher.svg';
+
   /// List of all assets
   List<String> get values => [
         all,
+        boxcheck,
         brain,
         business,
         car,
         card,
+        cartplus,
         chat,
+        financeCoporate,
+        friend,
         health,
         hobby,
         home,
+        homepage,
+        mappin,
         mask,
         merch,
         muslim,
         note,
-        people
+        people,
+        search,
+        voucher
       ];
 }
 

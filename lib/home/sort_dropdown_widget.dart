@@ -11,9 +11,9 @@ class SortDropdownWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final c = context.read<HomeCubit>();
     return BlocBuilder<HomeCubit, HomeState>(
       builder: (context, state) {
+        final c = context.read<HomeCubit>();
         return Container(
           decoration: BoxDecoration(
             color: Colors.grey[200],
@@ -31,6 +31,16 @@ class SortDropdownWidget extends StatelessWidget {
               selectedItemBuilder: (_) {
                 return sortOptions.map(
                   (String value) {
+                    // TODO: Text scroll need change when build
+                    return SizedBox(
+                      width: 80.0,
+                      child: Text(
+                        value,
+                        softWrap: true,
+                        overflow: TextOverflow.fade,
+                        style: const TextStyle(color: Colors.black),
+                      ),
+                    );
                     return SizedBox(
                       width: 80,
                       child: TextScroll(

@@ -4,10 +4,11 @@ import 'package:flutter/material.dart';
 import 'app_setup.dart';
 import 'core/index.dart';
 import 'core/widgets/app_bar/app_bar_cubit.dart';
-import 'core/widgets/bottom_nav_bar/bloc/bottom_nav_bar_cubit.dart';
+import 'core/widgets/dragable_bottom_nav_bar/bloc/draggable_bottom_nav_cubit.dart';
 import 'home/bloc/home_cubit.dart';
 
 Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   await setupServices();
   runApp(const MyApp());
 }
@@ -20,9 +21,8 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider<AppBarCubit>(create: (context) => AppBarCubit()),
-        BlocProvider<BottomNavBarCubit>(
-            create: (context) => BottomNavBarCubit()),
         BlocProvider<HomeCubit>(create: (context) => HomeCubit()),
+        BlocProvider<DraggableBottomNavCubit>(create: (context) => DraggableBottomNavCubit()),
       ],
       child: MaterialApp(
         title: Strings.appName,
@@ -30,6 +30,11 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         theme: ThemeData.light().copyWith(
           primaryColor: AppColors.primaryColor,
+          splashColor: AppColors.primaryColor.withOpacity(0.5),
+          bottomSheetTheme: const BottomSheetThemeData(
+            backgroundColor: AppColors.primaryColor,
+            surfaceTintColor: Colors.black,
+          ),
           inputDecorationTheme: defaultInputTheme,
           textSelectionTheme: const TextSelectionThemeData(
             selectionColor: AppColors.primaryColor,
@@ -50,7 +55,7 @@ class MyApp extends StatelessWidget {
             bodyMedium: TextStyle(
               fontSize: 16.0,
               fontWeight: FontWeight.w400,
-              color: Colors.white,
+              color: Colors.black,
             ),
           ),
         ),

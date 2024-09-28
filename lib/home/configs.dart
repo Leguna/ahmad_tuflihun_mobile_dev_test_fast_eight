@@ -70,3 +70,36 @@ final colors = [
   Colors.pink,
   Colors.teal,
 ];
+
+final List<IconMenuMdl> navBarIcons = [
+  IconMenuMdl(
+    title: 'Home',
+    icon: Assets.svgs.homepage,
+  ),
+  IconMenuMdl(
+    title: 'Search',
+    icon: Assets.svgs.search,
+  ),
+  IconMenuMdl(
+    title: 'Keranjang',
+    icon: Assets.svgs.cartplus,
+    badge: '0',
+  ),
+  IconMenuMdl(
+    title: 'Settings',
+    icon: Assets.svgs.boxcheck,
+    badge: '0',
+  ),
+  IconMenuMdl(
+    title: 'Voucher Saya',
+    icon: Assets.svgs.voucher,
+  ),
+  IconMenuMdl(
+    title: 'Alamat Pengiriman',
+    icon: Assets.svgs.mappin,
+  ),
+  IconMenuMdl(
+    title: 'Daftar Teman',
+    icon: Assets.svgs.friend,
+  ),
+];

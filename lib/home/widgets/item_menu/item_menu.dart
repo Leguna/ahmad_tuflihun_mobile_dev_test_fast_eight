@@ -2,12 +2,21 @@ import 'package:ahmad_tuflihun_mobile_dev_test_fast_eight/core/index.dart';
 import 'package:flutter/material.dart';
 
 class ItemMenu extends StatelessWidget {
-  const ItemMenu(
-      {super.key, required this.title, required this.icon, this.tag = ''});
+  const ItemMenu({
+    super.key,
+    required this.title,
+    required this.icon,
+    this.tag = '',
+    this.textColor = Colors.black,
+    this.onTap,
+  });
 
+  final Function()? onTap;
   final String title;
   final Widget icon;
   final String tag;
+  final Color textColor;
+  final bool showRipple = false;
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +24,9 @@ class ItemMenu extends StatelessWidget {
       color: Colors.transparent,
       child: InkWell(
         borderRadius: BorderRadius.circular(16.0),
-        onTap: () {},
+        onTap: () {
+          onTap?.call();
+        },
         child: Stack(
           children: [
             Container(
@@ -34,16 +45,17 @@ class ItemMenu extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(horizontal: 4.0),
                     child: icon,
                   ),
-                  const SizedBox(height: 8.0),
+                  const SizedBox(height: 4.0),
                   Text(
                     title,
-                    style: AppTextStyles.small,
+                    style: AppTextStyles.small.copyWith(
+                      color: textColor,
+                    ),
                     softWrap: true,
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                     textAlign: TextAlign.center,
                   ),
-                  const SizedBox(height: 8.0),
                 ],
               ),
             ),
@@ -68,6 +80,7 @@ class ItemMenu extends StatelessWidget {
                     tag,
                     style: const TextStyle(
                       fontSize: 12,
+                      color: Colors.white,
                     ),
                   ),
                 ),

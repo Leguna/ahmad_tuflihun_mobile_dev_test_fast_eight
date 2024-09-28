@@ -7,7 +7,7 @@ part 'app_bar_state.dart';
 
 class AppBarCubit extends Cubit<AppBarState> {
   AppBarCubit() : super(const AppBarState.initial()){
-    getWelcomeByTime();
+    title = getWelcomeByTime();
     emit(const AppBarState.initial());
   }
 

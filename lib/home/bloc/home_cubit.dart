@@ -17,8 +17,7 @@ class HomeCubit extends Cubit<HomeState> {
     getProducts();
   }
 
-  RefreshController refreshController =
-      RefreshController(initialRefresh: false);
+  late RefreshController refreshController;
 
   var switchValue = 0;
   var wishListCount = 0;
@@ -39,11 +38,15 @@ class HomeCubit extends Cubit<HomeState> {
 
   onLoadMore() async {
     emit(const HomeState.loading());
+    await Future.delayed(const Duration(milliseconds: 500));
+    refreshController.loadComplete();
     emit(HomeState.success(products: List.from([])));
   }
 
   onRefresh() async {
     emit(const HomeState.loading());
+    await Future.delayed(const Duration(milliseconds: 500));
+    refreshController.refreshCompleted();
     emit(HomeState.success(products: List.from([])));
   }
 
@@ -54,7 +57,6 @@ class HomeCubit extends Cubit<HomeState> {
   }
 
   void changeSort(String value) {
-    print("Test: $value");
     selectedSort = value;
     emit(const HomeState.loading());
     emit(HomeState.success(products: List.from([])));
@@ -70,7 +72,6 @@ enum SortOptions {
   lowestPrice,
 }
 
-// List String for dropdown
 List<String> sortOptions = [
   'Terpopular',
   'Newest',
