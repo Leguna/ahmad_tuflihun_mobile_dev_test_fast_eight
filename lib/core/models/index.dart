@@ -1,1 +1,1 @@
-export 'product_mdl.dart';
+export 'product/product_mdl.dart';

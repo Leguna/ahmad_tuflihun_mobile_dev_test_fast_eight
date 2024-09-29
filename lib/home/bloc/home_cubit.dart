@@ -4,7 +4,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 import '../../core/index.dart';
-import '../../core/models/product_mdl.dart';
+import '../../core/models/product/product_mdl.dart';
 import '../../core/services/local_database.dart';
 
 part 'home_cubit.freezed.dart';

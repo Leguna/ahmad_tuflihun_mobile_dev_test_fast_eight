@@ -3,7 +3,7 @@ import 'package:ahmad_tuflihun_mobile_dev_test_fast_eight/core/models/index.dart
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
-import '../../../core/string_utils.dart';
+import '../../../core/utils/string_utils.dart';
 
 class ProductItemWidget extends StatelessWidget {
   const ProductItemWidget({super.key, required this.product});

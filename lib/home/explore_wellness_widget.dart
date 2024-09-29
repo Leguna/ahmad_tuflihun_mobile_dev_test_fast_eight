@@ -28,7 +28,6 @@ class ExploreWellness extends StatelessWidget {
             ),
             const SizedBox(height: 16.0),
             ProductListWidget(products: c.products),
-            const SizedBox(height: 64.0),
           ],
         );
       },

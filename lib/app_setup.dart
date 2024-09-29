@@ -22,28 +22,35 @@ Future<void> setupServices({bool isBackground = false}) async {
     final localDatabase = LocalDatabase();
     getIt.registerLazySingleton(() => localDatabase);
 
-    List<ProductMdl> products = [
-      const ProductMdl(
-        name: 'Product 1',
-        image: 'https://picsum.photos/200/300?random=1000',
-        price: 100000,
-        discount: 0.1,
-      ),
-      ...List.generate(
-        10,
-        (index) => ProductMdl(
-          name: 'Product ${index + 2}',
-          image: 'https://picsum.photos/200/300?random=$index',
-          price: (Random().nextInt(200)+50) * 1000,
-        ),
-      ),
-    ];
-    List<Map<String, dynamic>> jsonList = products.map((product) => product.toJson()).toList();
-    String jsonString = json.encode(jsonList);
-    await localDatabase.setString(productsKey,  jsonString);
+    await addProductInit(localDatabase);
   } catch (e) {
     if (kDebugMode) {
       print('Error initializing services: $e');
     }
   }
 }
+
+Future<void> addProductInit(LocalDatabase localDatabase) async {
+  List<ProductMdl> products = [
+    const ProductMdl(
+      name: 'Product 1',
+      image: 'https://picsum.photos/200/300?random=1000',
+      price: 100000,
+      discount: 0.1,
+    ),
+    ...List.generate(
+      10,
+      (index) => ProductMdl(
+        name: 'Product ${index + 2}',
+        image: 'https://picsum.photos/200/300?random=$index',
+        price: (Random().nextInt(200) + 50) * 1000,
+      ),
+    ),
+  ];
+  List<Map<String, dynamic>> jsonList =
+      products.map((product) => product.toJson()).toList();
+  String jsonString = json.encode(jsonList);
+  await localDatabase.setString(productsKey, jsonString);
+}
+
+// Add user

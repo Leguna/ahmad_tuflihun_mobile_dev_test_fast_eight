@@ -13,22 +13,37 @@ final class Strings {
   static const save = 'Save';
   static const cancel = 'Cancel';
 
-  static String homeTitle = 'Popular Cakes';
-  static String categoryTitle = 'Categories';
+  static const String homeTitle = 'Popular Cakes';
+  static const String categoryTitle = 'Categories';
 
-  static String all = 'All';
+  static const String all = 'All';
 
-  static var home = 'Home';
+  static const home = 'Home';
 
-  static String produkKeuangan = 'Produk Keuangan';
+  static const String produkKeuangan = 'Produk Keuangan';
 
-  static var selamatPagi = 'Selamat Pagi';
-  static var selamatSiang = 'Selamat Siang';
-  static var selamatMalam = 'Selamat Malam';
+  static const String selamatPagi = 'Selamat Pagi';
+  static const String selamatSiang = 'Selamat Siang';
+  static const String selamatMalam = 'Selamat Malam';
 
-  static String wishlist = 'Wishlist';
+  static const String wishlist = 'Wishlist';
 
-  static String kategoriPilihan = 'Kategori Pilihan';
+  static const String kategoriPilihan = 'Kategori Pilihan';
 
-  static String exploreWellness = 'Explore Wellness';
+  static const String exploreWellness = 'Explore Wellness';
+
+  static const String informasiPribadi = 'Informasi Pribadi';
+
+  static const String biodata = 'Biodata Diri';
+
+  static const String informasiPerusahaan = 'Informasi Perusahaan';
+
+  static const String alamatPribadi = 'Alamat Pribadi';
+
+  static const String selanjutnya = 'Selanjutnya';
+  static const String sebelumnya = 'Sebelumnya';
+
+  static const String simpan = 'Simpan';
+
+  static const String masukDenaganGoogle = 'Masuk dengan Google';
 }

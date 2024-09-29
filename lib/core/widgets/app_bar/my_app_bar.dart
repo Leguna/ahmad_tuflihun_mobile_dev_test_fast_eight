@@ -6,19 +6,29 @@ import '../../index.dart';
 class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   const MyAppBar({
     super.key,
-    this.title = '',
     this.subTitle = '',
     this.isTitleCenter = false,
     this.leading,
     this.leadingWidth = 0.0,
-    this.titlePadding = const EdgeInsets.only(left: 24.0),
+    this.titlePadding = const EdgeInsets.only(),
     this.actions,
     this.isShowLeading = false,
     this.heightAdded = 0.0,
     this.autoImplyLeading = true,
     this.size,
+    this.backgroundColor = AppColors.primaryColorDark,
+    this.titleColor = Colors.white,
+    this.leadingColor = Colors.white,
+    this.titleStyle,
+    this.titleWidget,
+    required this.title,
   });
 
+  final Widget? titleWidget;
+  final TextStyle? titleStyle;
+  final Color titleColor;
+  final Color leadingColor;
+  final Color backgroundColor;
   final String subTitle;
   final EdgeInsets titlePadding;
   final bool autoImplyLeading;
@@ -36,58 +46,68 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
     return BlocBuilder<AppBarCubit, AppBarState>(
       builder: (context, state) {
         return SafeArea(
-          child: AppBar(
-            surfaceTintColor: AppColors.primaryColorDark,
-            foregroundColor: AppColors.primaryColorDark,
-            backgroundColor: AppColors.primaryColorDark,
-            leadingWidth: isShowLeading ? 40.0 : leadingWidth,
-            automaticallyImplyLeading: true,
-            toolbarHeight: kToolbarHeight + heightAdded,
-            titleSpacing: 0.0,
-            centerTitle: isTitleCenter,
-            title: Padding(
-              padding: titlePadding,
-              child: Column(
-                crossAxisAlignment: isTitleCenter
-                    ? CrossAxisAlignment.center
-                    : CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    title,
-                    softWrap: true,
-                    style: AppTextStyles.appBarTitle,
-                    textAlign:
-                        isTitleCenter ? TextAlign.center : TextAlign.start,
-                    overflow: TextOverflow.visible,
+          child: Column(
+            children: [
+              AppBar(
+                surfaceTintColor: AppColors.primaryColorDark,
+                foregroundColor: AppColors.primaryColorDark,
+                backgroundColor: backgroundColor,
+                leadingWidth: isShowLeading ? leadingWidth : 20.0,
+                automaticallyImplyLeading: autoImplyLeading,
+                toolbarHeight: kToolbarHeight + heightAdded,
+                titleSpacing: 0.0,
+                centerTitle: isTitleCenter,
+                title: Padding(
+                  padding: titlePadding,
+                  child: Column(
+                    crossAxisAlignment: isTitleCenter
+                        ? CrossAxisAlignment.center
+                        : CrossAxisAlignment.start,
+                    children: [
+                      titleWidget ??
+                          Text(
+                            title,
+                            softWrap: true,
+                            style: titleStyle ??
+                                AppTextStyles.appBarTitle.copyWith(
+                                  color: titleColor,
+                                ),
+                            textAlign: isTitleCenter
+                                ? TextAlign.center
+                                : TextAlign.start,
+                            overflow: TextOverflow.visible,
+                          ),
+                      if (subTitle.isNotEmpty) ...[
+                        Text(
+                          subTitle,
+                          style: AppTextStyles.appBarSubTitle,
+                        ),
+                      ],
+                    ],
                   ),
-                  if (subTitle.isNotEmpty) ...[
-                    Text(
-                      subTitle,
-                      style: AppTextStyles.appBarSubTitle,
-                    ),
+                ),
+                leading: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    if (isShowLeading) ...[
+                      IconButton(
+                        icon: Icon(
+                          Icons.arrow_back_ios,
+                          size: 20.0,
+                          color: leadingColor,
+                        ),
+                        onPressed: () {
+                          Navigator.of(context).pop();
+                        },
+                      ),
+                    ] else ...[
+                      const SizedBox(width: 0.0),
+                    ],
                   ],
-                ],
+                ),
+                actions: actions,
               ),
-            ),
-            leading: Row(
-              children: [
-                if (isShowLeading) ...[
-                  IconButton(
-                    icon: const Icon(
-                      Icons.arrow_back,
-                      size: 20.0,
-                      color: Colors.white,
-                    ),
-                    onPressed: () {
-                      Navigator.of(context).pop();
-                    },
-                  ),
-                ] else ...[
-                  const SizedBox(width: 30.0),
-                ],
-              ],
-            ),
-            actions: actions,
+            ],
           ),
         );
       },
