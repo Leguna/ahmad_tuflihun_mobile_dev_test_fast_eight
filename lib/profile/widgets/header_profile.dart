@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:image_picker/image_picker.dart';
 
-import '../../core/models/user/user_mdl.dart';
 import '../../core/strings.dart';
 import '../bloc/profile_cubit.dart';
 
@@ -17,16 +16,10 @@ class HeaderProfile extends StatelessWidget {
     return BlocBuilder<ProfileCubit, ProfileState>(
       builder: (context, state) {
         final c = context.read<ProfileCubit>();
-        final avatarPath = state.maybeWhen(
-          orElse: () => null,
-          photoProfilePicked: (path) => path,
-          profileLoaded: (UserMdl user) => user.image,
-        );
-        final userName = state.maybeWhen(
-              orElse: () => '-',
-              profileLoaded: (UserMdl user) => user.name,
-            ) ??
-            '-';
+        final avatarPath =
+            context.select((ProfileCubit cubit) => cubit.user.image);
+        final userName =
+            context.select((ProfileCubit cubit) => cubit.user.name) ?? '-';
         return Row(
           children: [
             const SizedBox(width: 20),

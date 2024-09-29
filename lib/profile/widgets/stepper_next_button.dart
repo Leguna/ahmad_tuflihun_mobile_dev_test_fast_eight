@@ -7,7 +7,7 @@ class StepperNextButton extends StatelessWidget {
     super.key,
     this.isLastStep = false,
     this.isFirstStep = false,
-    this.height = 48,
+    this.height = 64,
     this.onPressed,
   });
 

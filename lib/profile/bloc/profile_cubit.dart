@@ -5,6 +5,8 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:image_picker/image_picker.dart';
 
 import '../../core/index.dart';
+import '../../core/models/address/address_mdl.dart';
+import '../../core/models/company/company_mdl.dart';
 
 part 'profile_cubit.freezed.dart';
 part 'profile_state.dart';
@@ -15,13 +17,14 @@ class ProfileCubit extends Cubit<ProfileState> {
   ProfileCubit() : super(const ProfileState.initial()) {
     db.getString(profileKey).then((value) {
       if (value != null) {
-        final user = UserMdl.fromJsonString(value);
+        user = UserMdl.fromJsonString(value);
         emit(ProfileState.profileLoaded(user));
       }
     });
   }
 
   final db = getIt<LocalDatabase>();
+  UserMdl user = const UserMdl();
 
   var currentStep = 0;
   final PageController controller = PageController(initialPage: 0);
@@ -57,12 +60,19 @@ class ProfileCubit extends Cubit<ProfileState> {
   Future<void> saveImage(String path) async {
     var userMdl = await db.getString(profileKey);
     if (userMdl != null) {
-      final user = UserMdl.fromJsonString(userMdl).copyWith(image: path);
+       user = UserMdl.fromJsonString(userMdl).copyWith(image: path);
       await db.setString(profileKey, user.toJsonString());
-    } else{
-      final user = UserMdl(image: path);
+    } else {
+       user = UserMdl(image: path);
       await db.setString(profileKey, user.toJsonString());
     }
     emit(ProfileState.photoProfilePicked(path));
   }
+
+  Future<void> saveProfile(UserMdl user) async {
+    await db.setString(profileKey, user.toJsonString());
+    emit(ProfileState.profileLoaded(user));
+  }
+
+  Future<void> saveBio(UserMdl user) async {}
 }

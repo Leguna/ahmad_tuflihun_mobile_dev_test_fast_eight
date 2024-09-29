@@ -41,6 +41,9 @@ class _EditProfilePageState extends State<EditProfilePage> {
             stepperToggled: (index) {
               controller.jumpToPage(index);
             },
+            submit: () {
+              Navigator.pop(context);
+            },
             orElse: () {},
           );
         },

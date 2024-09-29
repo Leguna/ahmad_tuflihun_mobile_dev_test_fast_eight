@@ -45,7 +45,7 @@ class ProfileMenuList extends StatelessWidget {
           },
           child: ListTile(
             style: ListTileStyle.drawer,
-            title: Text(Strings.informasiPribadi),
+            title: const Text(Strings.informasiPribadi),
             leading: Container(
                 padding: const EdgeInsets.all(8),
                 decoration: BoxDecoration(

@@ -21,16 +21,8 @@ class HomePage extends StatelessWidget {
     homeCubit.refreshController = RefreshController();
     return BlocBuilder<ProfileCubit, ProfileState>(
       builder: (context, state) {
-        final avatarPath = state.maybeWhen(
-          orElse: () => null,
-          photoProfilePicked: (path) => path,
-          profileLoaded: (UserMdl user) => user.image,
-        );
-        final userName = state.maybeWhen(
-              orElse: () => '',
-              profileLoaded: (UserMdl user) => user.name,
-            ) ??
-            '';
+        final avatarPath = context.select((ProfileCubit cubit) => cubit.user.image);
+        final userName = context.select((ProfileCubit cubit) => cubit.user.name)?? '';
         return MyScaffold(
           appBar: MyAppBar(
             title: context.read<AppBarCubit>().title,
