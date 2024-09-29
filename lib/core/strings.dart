@@ -3,7 +3,7 @@ final class Strings {
 
   static const dataNotFound = 'Data not found';
 
-  static const appName = 'Kekiku';
+  static const appName = 'Ahmad Tuflihun Mobile Dev Test Fast Eight';
 
   static const onboardingDescription =
       'We specialize in custom cakes, cupcakes, and desserts for all occasions. We are proud to be a local business serving the community we love. Thank you for choosing us!';
@@ -46,4 +46,8 @@ final class Strings {
   static const String simpan = 'Simpan';
 
   static const String masukDenaganGoogle = 'Masuk dengan Google';
+
+  static const String kolomHarusDiisi = 'Kolom ini wajib diisi';
+
+  static const String dataTersimpan = 'Data berhasil tersimpan';
 }

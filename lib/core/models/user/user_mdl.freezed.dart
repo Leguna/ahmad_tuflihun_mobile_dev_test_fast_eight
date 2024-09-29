@@ -255,7 +255,7 @@ class _$UserMdlImpl extends _UserMdl {
       this.phone = '',
       this.address = '',
       this.birthDate = '',
-      this.gender = '',
+      this.gender = 'Laki-laki',
       this.image = '',
       this.role = '',
       this.education = '',

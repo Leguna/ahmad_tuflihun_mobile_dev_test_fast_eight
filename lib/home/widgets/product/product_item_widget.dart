@@ -46,13 +46,13 @@ class ProductItemWidget extends StatelessWidget {
                 children: [
                   Text(
                     formatMoney(product.price ?? 0),
-                    style: TextStyle(
-                      fontSize: 14.0,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black,
+                    style: AppTextStyles.price.copyWith(
                       decoration: (product.discount ?? 0) > 0
                           ? TextDecoration.lineThrough
                           : TextDecoration.none,
+                      fontWeight: (product.discount ?? 0) > 0
+                          ? FontWeight.w300
+                          : FontWeight.w500,
                     ),
                   ),
                   const SizedBox(width: 8.0),
@@ -67,27 +67,29 @@ class ProductItemWidget extends StatelessWidget {
               ),
               if ((product.discount ?? 0) > 0)
                 Text(
-                  formatMoney(((product.price ?? 0) -
-                      (product.price ?? 0) * (product.discount ?? 0))),
-                  style: AppTextStyles.price,
+                  formatMoney(
+                    ((product.price ?? 0) -
+                        (product.price ?? 0) * (product.discount ?? 0)),
+                  ),
+                  style: AppTextStyles.price.copyWith(
+                    fontWeight: FontWeight.w500,
+                  ),
                 )
             ],
           ),
           InkWell(
             splashColor: Colors.grey.withOpacity(0.5),
             borderRadius: BorderRadius.circular(16.0),
-            onTap: () {
-            },
+            onTap: () {},
             child: Container(
               width: double.infinity,
-              height:240,
+              height: 240,
               decoration: BoxDecoration(
                 color: Colors.transparent,
                 borderRadius: BorderRadius.circular(8.0),
               ),
             ),
           ),
-      
         ],
       ),
     );

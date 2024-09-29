@@ -21,7 +21,6 @@ class StepperNextButton extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
-        const SizedBox(width: 16),
         if (!isFirstStep)
           Expanded(
             child: OutlinedButton(
@@ -57,7 +56,6 @@ class StepperNextButton extends StatelessWidget {
             child: Text((isLastStep) ? Strings.simpan : Strings.selanjutnya),
           ),
         ),
-        const SizedBox(width: 16),
       ],
     );
   }

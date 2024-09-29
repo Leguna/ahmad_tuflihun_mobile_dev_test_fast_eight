@@ -31,16 +31,6 @@ class SortDropdownWidget extends StatelessWidget {
               selectedItemBuilder: (_) {
                 return sortOptions.map(
                   (String value) {
-                    // TODO: Text scroll need change when build
-                    return SizedBox(
-                      width: 80.0,
-                      child: Text(
-                        value,
-                        softWrap: true,
-                        overflow: TextOverflow.fade,
-                        style: const TextStyle(color: Colors.black),
-                      ),
-                    );
                     return SizedBox(
                       width: 80,
                       child: TextScroll(

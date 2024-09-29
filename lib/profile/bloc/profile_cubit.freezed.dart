@@ -20,39 +20,51 @@ mixin _$ProfileState {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function(String path) photoProfilePicked,
-    required TResult Function() profileSaved,
-    required TResult Function() addressSaved,
     required TResult Function() loading,
     required TResult Function(String message) error,
     required TResult Function(int index) stepperToggled,
     required TResult Function() submit,
     required TResult Function(UserMdl user) profileLoaded,
+    required TResult Function(UserMdl user) profileUpdated,
+    required TResult Function(AddressMdl address) addressLoaded,
+    required TResult Function(AddressMdl address) addressUpdated,
+    required TResult Function(CompanyMdl company) companyLoaded,
+    required TResult Function(CompanyMdl company) companyUpdated,
+    required TResult Function(String path) ktpImagePicked,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function(String path)? photoProfilePicked,
-    TResult? Function()? profileSaved,
-    TResult? Function()? addressSaved,
     TResult? Function()? loading,
     TResult? Function(String message)? error,
     TResult? Function(int index)? stepperToggled,
     TResult? Function()? submit,
     TResult? Function(UserMdl user)? profileLoaded,
+    TResult? Function(UserMdl user)? profileUpdated,
+    TResult? Function(AddressMdl address)? addressLoaded,
+    TResult? Function(AddressMdl address)? addressUpdated,
+    TResult? Function(CompanyMdl company)? companyLoaded,
+    TResult? Function(CompanyMdl company)? companyUpdated,
+    TResult? Function(String path)? ktpImagePicked,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(String path)? photoProfilePicked,
-    TResult Function()? profileSaved,
-    TResult Function()? addressSaved,
     TResult Function()? loading,
     TResult Function(String message)? error,
     TResult Function(int index)? stepperToggled,
     TResult Function()? submit,
     TResult Function(UserMdl user)? profileLoaded,
+    TResult Function(UserMdl user)? profileUpdated,
+    TResult Function(AddressMdl address)? addressLoaded,
+    TResult Function(AddressMdl address)? addressUpdated,
+    TResult Function(CompanyMdl company)? companyLoaded,
+    TResult Function(CompanyMdl company)? companyUpdated,
+    TResult Function(String path)? ktpImagePicked,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -60,39 +72,51 @@ mixin _$ProfileState {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_PhotoProfilePicked value) photoProfilePicked,
-    required TResult Function(_ProfileSaved value) profileSaved,
-    required TResult Function(_AddressSaved value) addressSaved,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Error value) error,
     required TResult Function(_StepperToggled value) stepperToggled,
     required TResult Function(_Submit value) submit,
     required TResult Function(_ProfileLoaded value) profileLoaded,
+    required TResult Function(_ProfileUpdated value) profileUpdated,
+    required TResult Function(_AddressLoaded value) addressLoaded,
+    required TResult Function(_AddressUpdated value) addressUpdated,
+    required TResult Function(_CompanyLoaded value) companyLoaded,
+    required TResult Function(_CompanyUpdated value) companyUpdated,
+    required TResult Function(_KtpImagePicked value) ktpImagePicked,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_PhotoProfilePicked value)? photoProfilePicked,
-    TResult? Function(_ProfileSaved value)? profileSaved,
-    TResult? Function(_AddressSaved value)? addressSaved,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Error value)? error,
     TResult? Function(_StepperToggled value)? stepperToggled,
     TResult? Function(_Submit value)? submit,
     TResult? Function(_ProfileLoaded value)? profileLoaded,
+    TResult? Function(_ProfileUpdated value)? profileUpdated,
+    TResult? Function(_AddressLoaded value)? addressLoaded,
+    TResult? Function(_AddressUpdated value)? addressUpdated,
+    TResult? Function(_CompanyLoaded value)? companyLoaded,
+    TResult? Function(_CompanyUpdated value)? companyUpdated,
+    TResult? Function(_KtpImagePicked value)? ktpImagePicked,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_PhotoProfilePicked value)? photoProfilePicked,
-    TResult Function(_ProfileSaved value)? profileSaved,
-    TResult Function(_AddressSaved value)? addressSaved,
     TResult Function(_Loading value)? loading,
     TResult Function(_Error value)? error,
     TResult Function(_StepperToggled value)? stepperToggled,
     TResult Function(_Submit value)? submit,
     TResult Function(_ProfileLoaded value)? profileLoaded,
+    TResult Function(_ProfileUpdated value)? profileUpdated,
+    TResult Function(_AddressLoaded value)? addressLoaded,
+    TResult Function(_AddressUpdated value)? addressUpdated,
+    TResult Function(_CompanyLoaded value)? companyLoaded,
+    TResult Function(_CompanyUpdated value)? companyUpdated,
+    TResult Function(_KtpImagePicked value)? ktpImagePicked,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -162,13 +186,17 @@ class _$InitialImpl implements _Initial {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function(String path) photoProfilePicked,
-    required TResult Function() profileSaved,
-    required TResult Function() addressSaved,
     required TResult Function() loading,
     required TResult Function(String message) error,
     required TResult Function(int index) stepperToggled,
     required TResult Function() submit,
     required TResult Function(UserMdl user) profileLoaded,
+    required TResult Function(UserMdl user) profileUpdated,
+    required TResult Function(AddressMdl address) addressLoaded,
+    required TResult Function(AddressMdl address) addressUpdated,
+    required TResult Function(CompanyMdl company) companyLoaded,
+    required TResult Function(CompanyMdl company) companyUpdated,
+    required TResult Function(String path) ktpImagePicked,
   }) {
     return initial();
   }
@@ -178,13 +206,17 @@ class _$InitialImpl implements _Initial {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function(String path)? photoProfilePicked,
-    TResult? Function()? profileSaved,
-    TResult? Function()? addressSaved,
     TResult? Function()? loading,
     TResult? Function(String message)? error,
     TResult? Function(int index)? stepperToggled,
     TResult? Function()? submit,
     TResult? Function(UserMdl user)? profileLoaded,
+    TResult? Function(UserMdl user)? profileUpdated,
+    TResult? Function(AddressMdl address)? addressLoaded,
+    TResult? Function(AddressMdl address)? addressUpdated,
+    TResult? Function(CompanyMdl company)? companyLoaded,
+    TResult? Function(CompanyMdl company)? companyUpdated,
+    TResult? Function(String path)? ktpImagePicked,
   }) {
     return initial?.call();
   }
@@ -194,13 +226,17 @@ class _$InitialImpl implements _Initial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(String path)? photoProfilePicked,
-    TResult Function()? profileSaved,
-    TResult Function()? addressSaved,
     TResult Function()? loading,
     TResult Function(String message)? error,
     TResult Function(int index)? stepperToggled,
     TResult Function()? submit,
     TResult Function(UserMdl user)? profileLoaded,
+    TResult Function(UserMdl user)? profileUpdated,
+    TResult Function(AddressMdl address)? addressLoaded,
+    TResult Function(AddressMdl address)? addressUpdated,
+    TResult Function(CompanyMdl company)? companyLoaded,
+    TResult Function(CompanyMdl company)? companyUpdated,
+    TResult Function(String path)? ktpImagePicked,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -214,13 +250,17 @@ class _$InitialImpl implements _Initial {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_PhotoProfilePicked value) photoProfilePicked,
-    required TResult Function(_ProfileSaved value) profileSaved,
-    required TResult Function(_AddressSaved value) addressSaved,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Error value) error,
     required TResult Function(_StepperToggled value) stepperToggled,
     required TResult Function(_Submit value) submit,
     required TResult Function(_ProfileLoaded value) profileLoaded,
+    required TResult Function(_ProfileUpdated value) profileUpdated,
+    required TResult Function(_AddressLoaded value) addressLoaded,
+    required TResult Function(_AddressUpdated value) addressUpdated,
+    required TResult Function(_CompanyLoaded value) companyLoaded,
+    required TResult Function(_CompanyUpdated value) companyUpdated,
+    required TResult Function(_KtpImagePicked value) ktpImagePicked,
   }) {
     return initial(this);
   }
@@ -230,13 +270,17 @@ class _$InitialImpl implements _Initial {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_PhotoProfilePicked value)? photoProfilePicked,
-    TResult? Function(_ProfileSaved value)? profileSaved,
-    TResult? Function(_AddressSaved value)? addressSaved,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Error value)? error,
     TResult? Function(_StepperToggled value)? stepperToggled,
     TResult? Function(_Submit value)? submit,
     TResult? Function(_ProfileLoaded value)? profileLoaded,
+    TResult? Function(_ProfileUpdated value)? profileUpdated,
+    TResult? Function(_AddressLoaded value)? addressLoaded,
+    TResult? Function(_AddressUpdated value)? addressUpdated,
+    TResult? Function(_CompanyLoaded value)? companyLoaded,
+    TResult? Function(_CompanyUpdated value)? companyUpdated,
+    TResult? Function(_KtpImagePicked value)? ktpImagePicked,
   }) {
     return initial?.call(this);
   }
@@ -246,13 +290,17 @@ class _$InitialImpl implements _Initial {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_PhotoProfilePicked value)? photoProfilePicked,
-    TResult Function(_ProfileSaved value)? profileSaved,
-    TResult Function(_AddressSaved value)? addressSaved,
     TResult Function(_Loading value)? loading,
     TResult Function(_Error value)? error,
     TResult Function(_StepperToggled value)? stepperToggled,
     TResult Function(_Submit value)? submit,
     TResult Function(_ProfileLoaded value)? profileLoaded,
+    TResult Function(_ProfileUpdated value)? profileUpdated,
+    TResult Function(_AddressLoaded value)? addressLoaded,
+    TResult Function(_AddressUpdated value)? addressUpdated,
+    TResult Function(_CompanyLoaded value)? companyLoaded,
+    TResult Function(_CompanyUpdated value)? companyUpdated,
+    TResult Function(_KtpImagePicked value)? ktpImagePicked,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -337,13 +385,17 @@ class _$PhotoProfilePickedImpl implements _PhotoProfilePicked {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function(String path) photoProfilePicked,
-    required TResult Function() profileSaved,
-    required TResult Function() addressSaved,
     required TResult Function() loading,
     required TResult Function(String message) error,
     required TResult Function(int index) stepperToggled,
     required TResult Function() submit,
     required TResult Function(UserMdl user) profileLoaded,
+    required TResult Function(UserMdl user) profileUpdated,
+    required TResult Function(AddressMdl address) addressLoaded,
+    required TResult Function(AddressMdl address) addressUpdated,
+    required TResult Function(CompanyMdl company) companyLoaded,
+    required TResult Function(CompanyMdl company) companyUpdated,
+    required TResult Function(String path) ktpImagePicked,
   }) {
     return photoProfilePicked(path);
   }
@@ -353,13 +405,17 @@ class _$PhotoProfilePickedImpl implements _PhotoProfilePicked {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function(String path)? photoProfilePicked,
-    TResult? Function()? profileSaved,
-    TResult? Function()? addressSaved,
     TResult? Function()? loading,
     TResult? Function(String message)? error,
     TResult? Function(int index)? stepperToggled,
     TResult? Function()? submit,
     TResult? Function(UserMdl user)? profileLoaded,
+    TResult? Function(UserMdl user)? profileUpdated,
+    TResult? Function(AddressMdl address)? addressLoaded,
+    TResult? Function(AddressMdl address)? addressUpdated,
+    TResult? Function(CompanyMdl company)? companyLoaded,
+    TResult? Function(CompanyMdl company)? companyUpdated,
+    TResult? Function(String path)? ktpImagePicked,
   }) {
     return photoProfilePicked?.call(path);
   }
@@ -369,13 +425,17 @@ class _$PhotoProfilePickedImpl implements _PhotoProfilePicked {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(String path)? photoProfilePicked,
-    TResult Function()? profileSaved,
-    TResult Function()? addressSaved,
     TResult Function()? loading,
     TResult Function(String message)? error,
     TResult Function(int index)? stepperToggled,
     TResult Function()? submit,
     TResult Function(UserMdl user)? profileLoaded,
+    TResult Function(UserMdl user)? profileUpdated,
+    TResult Function(AddressMdl address)? addressLoaded,
+    TResult Function(AddressMdl address)? addressUpdated,
+    TResult Function(CompanyMdl company)? companyLoaded,
+    TResult Function(CompanyMdl company)? companyUpdated,
+    TResult Function(String path)? ktpImagePicked,
     required TResult orElse(),
   }) {
     if (photoProfilePicked != null) {
@@ -389,13 +449,17 @@ class _$PhotoProfilePickedImpl implements _PhotoProfilePicked {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_PhotoProfilePicked value) photoProfilePicked,
-    required TResult Function(_ProfileSaved value) profileSaved,
-    required TResult Function(_AddressSaved value) addressSaved,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Error value) error,
     required TResult Function(_StepperToggled value) stepperToggled,
     required TResult Function(_Submit value) submit,
     required TResult Function(_ProfileLoaded value) profileLoaded,
+    required TResult Function(_ProfileUpdated value) profileUpdated,
+    required TResult Function(_AddressLoaded value) addressLoaded,
+    required TResult Function(_AddressUpdated value) addressUpdated,
+    required TResult Function(_CompanyLoaded value) companyLoaded,
+    required TResult Function(_CompanyUpdated value) companyUpdated,
+    required TResult Function(_KtpImagePicked value) ktpImagePicked,
   }) {
     return photoProfilePicked(this);
   }
@@ -405,13 +469,17 @@ class _$PhotoProfilePickedImpl implements _PhotoProfilePicked {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_PhotoProfilePicked value)? photoProfilePicked,
-    TResult? Function(_ProfileSaved value)? profileSaved,
-    TResult? Function(_AddressSaved value)? addressSaved,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Error value)? error,
     TResult? Function(_StepperToggled value)? stepperToggled,
     TResult? Function(_Submit value)? submit,
     TResult? Function(_ProfileLoaded value)? profileLoaded,
+    TResult? Function(_ProfileUpdated value)? profileUpdated,
+    TResult? Function(_AddressLoaded value)? addressLoaded,
+    TResult? Function(_AddressUpdated value)? addressUpdated,
+    TResult? Function(_CompanyLoaded value)? companyLoaded,
+    TResult? Function(_CompanyUpdated value)? companyUpdated,
+    TResult? Function(_KtpImagePicked value)? ktpImagePicked,
   }) {
     return photoProfilePicked?.call(this);
   }
@@ -421,13 +489,17 @@ class _$PhotoProfilePickedImpl implements _PhotoProfilePicked {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_PhotoProfilePicked value)? photoProfilePicked,
-    TResult Function(_ProfileSaved value)? profileSaved,
-    TResult Function(_AddressSaved value)? addressSaved,
     TResult Function(_Loading value)? loading,
     TResult Function(_Error value)? error,
     TResult Function(_StepperToggled value)? stepperToggled,
     TResult Function(_Submit value)? submit,
     TResult Function(_ProfileLoaded value)? profileLoaded,
+    TResult Function(_ProfileUpdated value)? profileUpdated,
+    TResult Function(_AddressLoaded value)? addressLoaded,
+    TResult Function(_AddressUpdated value)? addressUpdated,
+    TResult Function(_CompanyLoaded value)? companyLoaded,
+    TResult Function(_CompanyUpdated value)? companyUpdated,
+    TResult Function(_KtpImagePicked value)? ktpImagePicked,
     required TResult orElse(),
   }) {
     if (photoProfilePicked != null) {
@@ -448,300 +520,6 @@ abstract class _PhotoProfilePicked implements ProfileState {
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PhotoProfilePickedImplCopyWith<_$PhotoProfilePickedImpl> get copyWith =>
       throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$ProfileSavedImplCopyWith<$Res> {
-  factory _$$ProfileSavedImplCopyWith(
-          _$ProfileSavedImpl value, $Res Function(_$ProfileSavedImpl) then) =
-      __$$ProfileSavedImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$ProfileSavedImplCopyWithImpl<$Res>
-    extends _$ProfileStateCopyWithImpl<$Res, _$ProfileSavedImpl>
-    implements _$$ProfileSavedImplCopyWith<$Res> {
-  __$$ProfileSavedImplCopyWithImpl(
-      _$ProfileSavedImpl _value, $Res Function(_$ProfileSavedImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of ProfileState
-  /// with the given fields replaced by the non-null parameter values.
-}
-
-/// @nodoc
-
-class _$ProfileSavedImpl implements _ProfileSaved {
-  const _$ProfileSavedImpl();
-
-  @override
-  String toString() {
-    return 'ProfileState.profileSaved()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$ProfileSavedImpl);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function(String path) photoProfilePicked,
-    required TResult Function() profileSaved,
-    required TResult Function() addressSaved,
-    required TResult Function() loading,
-    required TResult Function(String message) error,
-    required TResult Function(int index) stepperToggled,
-    required TResult Function() submit,
-    required TResult Function(UserMdl user) profileLoaded,
-  }) {
-    return profileSaved();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function(String path)? photoProfilePicked,
-    TResult? Function()? profileSaved,
-    TResult? Function()? addressSaved,
-    TResult? Function()? loading,
-    TResult? Function(String message)? error,
-    TResult? Function(int index)? stepperToggled,
-    TResult? Function()? submit,
-    TResult? Function(UserMdl user)? profileLoaded,
-  }) {
-    return profileSaved?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function(String path)? photoProfilePicked,
-    TResult Function()? profileSaved,
-    TResult Function()? addressSaved,
-    TResult Function()? loading,
-    TResult Function(String message)? error,
-    TResult Function(int index)? stepperToggled,
-    TResult Function()? submit,
-    TResult Function(UserMdl user)? profileLoaded,
-    required TResult orElse(),
-  }) {
-    if (profileSaved != null) {
-      return profileSaved();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_PhotoProfilePicked value) photoProfilePicked,
-    required TResult Function(_ProfileSaved value) profileSaved,
-    required TResult Function(_AddressSaved value) addressSaved,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_Error value) error,
-    required TResult Function(_StepperToggled value) stepperToggled,
-    required TResult Function(_Submit value) submit,
-    required TResult Function(_ProfileLoaded value) profileLoaded,
-  }) {
-    return profileSaved(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(_PhotoProfilePicked value)? photoProfilePicked,
-    TResult? Function(_ProfileSaved value)? profileSaved,
-    TResult? Function(_AddressSaved value)? addressSaved,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_Error value)? error,
-    TResult? Function(_StepperToggled value)? stepperToggled,
-    TResult? Function(_Submit value)? submit,
-    TResult? Function(_ProfileLoaded value)? profileLoaded,
-  }) {
-    return profileSaved?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_PhotoProfilePicked value)? photoProfilePicked,
-    TResult Function(_ProfileSaved value)? profileSaved,
-    TResult Function(_AddressSaved value)? addressSaved,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Error value)? error,
-    TResult Function(_StepperToggled value)? stepperToggled,
-    TResult Function(_Submit value)? submit,
-    TResult Function(_ProfileLoaded value)? profileLoaded,
-    required TResult orElse(),
-  }) {
-    if (profileSaved != null) {
-      return profileSaved(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _ProfileSaved implements ProfileState {
-  const factory _ProfileSaved() = _$ProfileSavedImpl;
-}
-
-/// @nodoc
-abstract class _$$AddressSavedImplCopyWith<$Res> {
-  factory _$$AddressSavedImplCopyWith(
-          _$AddressSavedImpl value, $Res Function(_$AddressSavedImpl) then) =
-      __$$AddressSavedImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$AddressSavedImplCopyWithImpl<$Res>
-    extends _$ProfileStateCopyWithImpl<$Res, _$AddressSavedImpl>
-    implements _$$AddressSavedImplCopyWith<$Res> {
-  __$$AddressSavedImplCopyWithImpl(
-      _$AddressSavedImpl _value, $Res Function(_$AddressSavedImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of ProfileState
-  /// with the given fields replaced by the non-null parameter values.
-}
-
-/// @nodoc
-
-class _$AddressSavedImpl implements _AddressSaved {
-  const _$AddressSavedImpl();
-
-  @override
-  String toString() {
-    return 'ProfileState.addressSaved()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$AddressSavedImpl);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function(String path) photoProfilePicked,
-    required TResult Function() profileSaved,
-    required TResult Function() addressSaved,
-    required TResult Function() loading,
-    required TResult Function(String message) error,
-    required TResult Function(int index) stepperToggled,
-    required TResult Function() submit,
-    required TResult Function(UserMdl user) profileLoaded,
-  }) {
-    return addressSaved();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function(String path)? photoProfilePicked,
-    TResult? Function()? profileSaved,
-    TResult? Function()? addressSaved,
-    TResult? Function()? loading,
-    TResult? Function(String message)? error,
-    TResult? Function(int index)? stepperToggled,
-    TResult? Function()? submit,
-    TResult? Function(UserMdl user)? profileLoaded,
-  }) {
-    return addressSaved?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function(String path)? photoProfilePicked,
-    TResult Function()? profileSaved,
-    TResult Function()? addressSaved,
-    TResult Function()? loading,
-    TResult Function(String message)? error,
-    TResult Function(int index)? stepperToggled,
-    TResult Function()? submit,
-    TResult Function(UserMdl user)? profileLoaded,
-    required TResult orElse(),
-  }) {
-    if (addressSaved != null) {
-      return addressSaved();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_PhotoProfilePicked value) photoProfilePicked,
-    required TResult Function(_ProfileSaved value) profileSaved,
-    required TResult Function(_AddressSaved value) addressSaved,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_Error value) error,
-    required TResult Function(_StepperToggled value) stepperToggled,
-    required TResult Function(_Submit value) submit,
-    required TResult Function(_ProfileLoaded value) profileLoaded,
-  }) {
-    return addressSaved(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(_PhotoProfilePicked value)? photoProfilePicked,
-    TResult? Function(_ProfileSaved value)? profileSaved,
-    TResult? Function(_AddressSaved value)? addressSaved,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_Error value)? error,
-    TResult? Function(_StepperToggled value)? stepperToggled,
-    TResult? Function(_Submit value)? submit,
-    TResult? Function(_ProfileLoaded value)? profileLoaded,
-  }) {
-    return addressSaved?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_PhotoProfilePicked value)? photoProfilePicked,
-    TResult Function(_ProfileSaved value)? profileSaved,
-    TResult Function(_AddressSaved value)? addressSaved,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Error value)? error,
-    TResult Function(_StepperToggled value)? stepperToggled,
-    TResult Function(_Submit value)? submit,
-    TResult Function(_ProfileLoaded value)? profileLoaded,
-    required TResult orElse(),
-  }) {
-    if (addressSaved != null) {
-      return addressSaved(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _AddressSaved implements ProfileState {
-  const factory _AddressSaved() = _$AddressSavedImpl;
 }
 
 /// @nodoc
@@ -787,13 +565,17 @@ class _$LoadingImpl implements _Loading {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function(String path) photoProfilePicked,
-    required TResult Function() profileSaved,
-    required TResult Function() addressSaved,
     required TResult Function() loading,
     required TResult Function(String message) error,
     required TResult Function(int index) stepperToggled,
     required TResult Function() submit,
     required TResult Function(UserMdl user) profileLoaded,
+    required TResult Function(UserMdl user) profileUpdated,
+    required TResult Function(AddressMdl address) addressLoaded,
+    required TResult Function(AddressMdl address) addressUpdated,
+    required TResult Function(CompanyMdl company) companyLoaded,
+    required TResult Function(CompanyMdl company) companyUpdated,
+    required TResult Function(String path) ktpImagePicked,
   }) {
     return loading();
   }
@@ -803,13 +585,17 @@ class _$LoadingImpl implements _Loading {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function(String path)? photoProfilePicked,
-    TResult? Function()? profileSaved,
-    TResult? Function()? addressSaved,
     TResult? Function()? loading,
     TResult? Function(String message)? error,
     TResult? Function(int index)? stepperToggled,
     TResult? Function()? submit,
     TResult? Function(UserMdl user)? profileLoaded,
+    TResult? Function(UserMdl user)? profileUpdated,
+    TResult? Function(AddressMdl address)? addressLoaded,
+    TResult? Function(AddressMdl address)? addressUpdated,
+    TResult? Function(CompanyMdl company)? companyLoaded,
+    TResult? Function(CompanyMdl company)? companyUpdated,
+    TResult? Function(String path)? ktpImagePicked,
   }) {
     return loading?.call();
   }
@@ -819,13 +605,17 @@ class _$LoadingImpl implements _Loading {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(String path)? photoProfilePicked,
-    TResult Function()? profileSaved,
-    TResult Function()? addressSaved,
     TResult Function()? loading,
     TResult Function(String message)? error,
     TResult Function(int index)? stepperToggled,
     TResult Function()? submit,
     TResult Function(UserMdl user)? profileLoaded,
+    TResult Function(UserMdl user)? profileUpdated,
+    TResult Function(AddressMdl address)? addressLoaded,
+    TResult Function(AddressMdl address)? addressUpdated,
+    TResult Function(CompanyMdl company)? companyLoaded,
+    TResult Function(CompanyMdl company)? companyUpdated,
+    TResult Function(String path)? ktpImagePicked,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -839,13 +629,17 @@ class _$LoadingImpl implements _Loading {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_PhotoProfilePicked value) photoProfilePicked,
-    required TResult Function(_ProfileSaved value) profileSaved,
-    required TResult Function(_AddressSaved value) addressSaved,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Error value) error,
     required TResult Function(_StepperToggled value) stepperToggled,
     required TResult Function(_Submit value) submit,
     required TResult Function(_ProfileLoaded value) profileLoaded,
+    required TResult Function(_ProfileUpdated value) profileUpdated,
+    required TResult Function(_AddressLoaded value) addressLoaded,
+    required TResult Function(_AddressUpdated value) addressUpdated,
+    required TResult Function(_CompanyLoaded value) companyLoaded,
+    required TResult Function(_CompanyUpdated value) companyUpdated,
+    required TResult Function(_KtpImagePicked value) ktpImagePicked,
   }) {
     return loading(this);
   }
@@ -855,13 +649,17 @@ class _$LoadingImpl implements _Loading {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_PhotoProfilePicked value)? photoProfilePicked,
-    TResult? Function(_ProfileSaved value)? profileSaved,
-    TResult? Function(_AddressSaved value)? addressSaved,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Error value)? error,
     TResult? Function(_StepperToggled value)? stepperToggled,
     TResult? Function(_Submit value)? submit,
     TResult? Function(_ProfileLoaded value)? profileLoaded,
+    TResult? Function(_ProfileUpdated value)? profileUpdated,
+    TResult? Function(_AddressLoaded value)? addressLoaded,
+    TResult? Function(_AddressUpdated value)? addressUpdated,
+    TResult? Function(_CompanyLoaded value)? companyLoaded,
+    TResult? Function(_CompanyUpdated value)? companyUpdated,
+    TResult? Function(_KtpImagePicked value)? ktpImagePicked,
   }) {
     return loading?.call(this);
   }
@@ -871,13 +669,17 @@ class _$LoadingImpl implements _Loading {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_PhotoProfilePicked value)? photoProfilePicked,
-    TResult Function(_ProfileSaved value)? profileSaved,
-    TResult Function(_AddressSaved value)? addressSaved,
     TResult Function(_Loading value)? loading,
     TResult Function(_Error value)? error,
     TResult Function(_StepperToggled value)? stepperToggled,
     TResult Function(_Submit value)? submit,
     TResult Function(_ProfileLoaded value)? profileLoaded,
+    TResult Function(_ProfileUpdated value)? profileUpdated,
+    TResult Function(_AddressLoaded value)? addressLoaded,
+    TResult Function(_AddressUpdated value)? addressUpdated,
+    TResult Function(_CompanyLoaded value)? companyLoaded,
+    TResult Function(_CompanyUpdated value)? companyUpdated,
+    TResult Function(_KtpImagePicked value)? ktpImagePicked,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -961,13 +763,17 @@ class _$ErrorImpl implements _Error {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function(String path) photoProfilePicked,
-    required TResult Function() profileSaved,
-    required TResult Function() addressSaved,
     required TResult Function() loading,
     required TResult Function(String message) error,
     required TResult Function(int index) stepperToggled,
     required TResult Function() submit,
     required TResult Function(UserMdl user) profileLoaded,
+    required TResult Function(UserMdl user) profileUpdated,
+    required TResult Function(AddressMdl address) addressLoaded,
+    required TResult Function(AddressMdl address) addressUpdated,
+    required TResult Function(CompanyMdl company) companyLoaded,
+    required TResult Function(CompanyMdl company) companyUpdated,
+    required TResult Function(String path) ktpImagePicked,
   }) {
     return error(message);
   }
@@ -977,13 +783,17 @@ class _$ErrorImpl implements _Error {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function(String path)? photoProfilePicked,
-    TResult? Function()? profileSaved,
-    TResult? Function()? addressSaved,
     TResult? Function()? loading,
     TResult? Function(String message)? error,
     TResult? Function(int index)? stepperToggled,
     TResult? Function()? submit,
     TResult? Function(UserMdl user)? profileLoaded,
+    TResult? Function(UserMdl user)? profileUpdated,
+    TResult? Function(AddressMdl address)? addressLoaded,
+    TResult? Function(AddressMdl address)? addressUpdated,
+    TResult? Function(CompanyMdl company)? companyLoaded,
+    TResult? Function(CompanyMdl company)? companyUpdated,
+    TResult? Function(String path)? ktpImagePicked,
   }) {
     return error?.call(message);
   }
@@ -993,13 +803,17 @@ class _$ErrorImpl implements _Error {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(String path)? photoProfilePicked,
-    TResult Function()? profileSaved,
-    TResult Function()? addressSaved,
     TResult Function()? loading,
     TResult Function(String message)? error,
     TResult Function(int index)? stepperToggled,
     TResult Function()? submit,
     TResult Function(UserMdl user)? profileLoaded,
+    TResult Function(UserMdl user)? profileUpdated,
+    TResult Function(AddressMdl address)? addressLoaded,
+    TResult Function(AddressMdl address)? addressUpdated,
+    TResult Function(CompanyMdl company)? companyLoaded,
+    TResult Function(CompanyMdl company)? companyUpdated,
+    TResult Function(String path)? ktpImagePicked,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -1013,13 +827,17 @@ class _$ErrorImpl implements _Error {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_PhotoProfilePicked value) photoProfilePicked,
-    required TResult Function(_ProfileSaved value) profileSaved,
-    required TResult Function(_AddressSaved value) addressSaved,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Error value) error,
     required TResult Function(_StepperToggled value) stepperToggled,
     required TResult Function(_Submit value) submit,
     required TResult Function(_ProfileLoaded value) profileLoaded,
+    required TResult Function(_ProfileUpdated value) profileUpdated,
+    required TResult Function(_AddressLoaded value) addressLoaded,
+    required TResult Function(_AddressUpdated value) addressUpdated,
+    required TResult Function(_CompanyLoaded value) companyLoaded,
+    required TResult Function(_CompanyUpdated value) companyUpdated,
+    required TResult Function(_KtpImagePicked value) ktpImagePicked,
   }) {
     return error(this);
   }
@@ -1029,13 +847,17 @@ class _$ErrorImpl implements _Error {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_PhotoProfilePicked value)? photoProfilePicked,
-    TResult? Function(_ProfileSaved value)? profileSaved,
-    TResult? Function(_AddressSaved value)? addressSaved,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Error value)? error,
     TResult? Function(_StepperToggled value)? stepperToggled,
     TResult? Function(_Submit value)? submit,
     TResult? Function(_ProfileLoaded value)? profileLoaded,
+    TResult? Function(_ProfileUpdated value)? profileUpdated,
+    TResult? Function(_AddressLoaded value)? addressLoaded,
+    TResult? Function(_AddressUpdated value)? addressUpdated,
+    TResult? Function(_CompanyLoaded value)? companyLoaded,
+    TResult? Function(_CompanyUpdated value)? companyUpdated,
+    TResult? Function(_KtpImagePicked value)? ktpImagePicked,
   }) {
     return error?.call(this);
   }
@@ -1045,13 +867,17 @@ class _$ErrorImpl implements _Error {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_PhotoProfilePicked value)? photoProfilePicked,
-    TResult Function(_ProfileSaved value)? profileSaved,
-    TResult Function(_AddressSaved value)? addressSaved,
     TResult Function(_Loading value)? loading,
     TResult Function(_Error value)? error,
     TResult Function(_StepperToggled value)? stepperToggled,
     TResult Function(_Submit value)? submit,
     TResult Function(_ProfileLoaded value)? profileLoaded,
+    TResult Function(_ProfileUpdated value)? profileUpdated,
+    TResult Function(_AddressLoaded value)? addressLoaded,
+    TResult Function(_AddressUpdated value)? addressUpdated,
+    TResult Function(_CompanyLoaded value)? companyLoaded,
+    TResult Function(_CompanyUpdated value)? companyUpdated,
+    TResult Function(_KtpImagePicked value)? ktpImagePicked,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -1144,13 +970,17 @@ class _$StepperToggledImpl implements _StepperToggled {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function(String path) photoProfilePicked,
-    required TResult Function() profileSaved,
-    required TResult Function() addressSaved,
     required TResult Function() loading,
     required TResult Function(String message) error,
     required TResult Function(int index) stepperToggled,
     required TResult Function() submit,
     required TResult Function(UserMdl user) profileLoaded,
+    required TResult Function(UserMdl user) profileUpdated,
+    required TResult Function(AddressMdl address) addressLoaded,
+    required TResult Function(AddressMdl address) addressUpdated,
+    required TResult Function(CompanyMdl company) companyLoaded,
+    required TResult Function(CompanyMdl company) companyUpdated,
+    required TResult Function(String path) ktpImagePicked,
   }) {
     return stepperToggled(index);
   }
@@ -1160,13 +990,17 @@ class _$StepperToggledImpl implements _StepperToggled {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function(String path)? photoProfilePicked,
-    TResult? Function()? profileSaved,
-    TResult? Function()? addressSaved,
     TResult? Function()? loading,
     TResult? Function(String message)? error,
     TResult? Function(int index)? stepperToggled,
     TResult? Function()? submit,
     TResult? Function(UserMdl user)? profileLoaded,
+    TResult? Function(UserMdl user)? profileUpdated,
+    TResult? Function(AddressMdl address)? addressLoaded,
+    TResult? Function(AddressMdl address)? addressUpdated,
+    TResult? Function(CompanyMdl company)? companyLoaded,
+    TResult? Function(CompanyMdl company)? companyUpdated,
+    TResult? Function(String path)? ktpImagePicked,
   }) {
     return stepperToggled?.call(index);
   }
@@ -1176,13 +1010,17 @@ class _$StepperToggledImpl implements _StepperToggled {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(String path)? photoProfilePicked,
-    TResult Function()? profileSaved,
-    TResult Function()? addressSaved,
     TResult Function()? loading,
     TResult Function(String message)? error,
     TResult Function(int index)? stepperToggled,
     TResult Function()? submit,
     TResult Function(UserMdl user)? profileLoaded,
+    TResult Function(UserMdl user)? profileUpdated,
+    TResult Function(AddressMdl address)? addressLoaded,
+    TResult Function(AddressMdl address)? addressUpdated,
+    TResult Function(CompanyMdl company)? companyLoaded,
+    TResult Function(CompanyMdl company)? companyUpdated,
+    TResult Function(String path)? ktpImagePicked,
     required TResult orElse(),
   }) {
     if (stepperToggled != null) {
@@ -1196,13 +1034,17 @@ class _$StepperToggledImpl implements _StepperToggled {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_PhotoProfilePicked value) photoProfilePicked,
-    required TResult Function(_ProfileSaved value) profileSaved,
-    required TResult Function(_AddressSaved value) addressSaved,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Error value) error,
     required TResult Function(_StepperToggled value) stepperToggled,
     required TResult Function(_Submit value) submit,
     required TResult Function(_ProfileLoaded value) profileLoaded,
+    required TResult Function(_ProfileUpdated value) profileUpdated,
+    required TResult Function(_AddressLoaded value) addressLoaded,
+    required TResult Function(_AddressUpdated value) addressUpdated,
+    required TResult Function(_CompanyLoaded value) companyLoaded,
+    required TResult Function(_CompanyUpdated value) companyUpdated,
+    required TResult Function(_KtpImagePicked value) ktpImagePicked,
   }) {
     return stepperToggled(this);
   }
@@ -1212,13 +1054,17 @@ class _$StepperToggledImpl implements _StepperToggled {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_PhotoProfilePicked value)? photoProfilePicked,
-    TResult? Function(_ProfileSaved value)? profileSaved,
-    TResult? Function(_AddressSaved value)? addressSaved,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Error value)? error,
     TResult? Function(_StepperToggled value)? stepperToggled,
     TResult? Function(_Submit value)? submit,
     TResult? Function(_ProfileLoaded value)? profileLoaded,
+    TResult? Function(_ProfileUpdated value)? profileUpdated,
+    TResult? Function(_AddressLoaded value)? addressLoaded,
+    TResult? Function(_AddressUpdated value)? addressUpdated,
+    TResult? Function(_CompanyLoaded value)? companyLoaded,
+    TResult? Function(_CompanyUpdated value)? companyUpdated,
+    TResult? Function(_KtpImagePicked value)? ktpImagePicked,
   }) {
     return stepperToggled?.call(this);
   }
@@ -1228,13 +1074,17 @@ class _$StepperToggledImpl implements _StepperToggled {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_PhotoProfilePicked value)? photoProfilePicked,
-    TResult Function(_ProfileSaved value)? profileSaved,
-    TResult Function(_AddressSaved value)? addressSaved,
     TResult Function(_Loading value)? loading,
     TResult Function(_Error value)? error,
     TResult Function(_StepperToggled value)? stepperToggled,
     TResult Function(_Submit value)? submit,
     TResult Function(_ProfileLoaded value)? profileLoaded,
+    TResult Function(_ProfileUpdated value)? profileUpdated,
+    TResult Function(_AddressLoaded value)? addressLoaded,
+    TResult Function(_AddressUpdated value)? addressUpdated,
+    TResult Function(_CompanyLoaded value)? companyLoaded,
+    TResult Function(_CompanyUpdated value)? companyUpdated,
+    TResult Function(_KtpImagePicked value)? ktpImagePicked,
     required TResult orElse(),
   }) {
     if (stepperToggled != null) {
@@ -1299,13 +1149,17 @@ class _$SubmitImpl implements _Submit {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function(String path) photoProfilePicked,
-    required TResult Function() profileSaved,
-    required TResult Function() addressSaved,
     required TResult Function() loading,
     required TResult Function(String message) error,
     required TResult Function(int index) stepperToggled,
     required TResult Function() submit,
     required TResult Function(UserMdl user) profileLoaded,
+    required TResult Function(UserMdl user) profileUpdated,
+    required TResult Function(AddressMdl address) addressLoaded,
+    required TResult Function(AddressMdl address) addressUpdated,
+    required TResult Function(CompanyMdl company) companyLoaded,
+    required TResult Function(CompanyMdl company) companyUpdated,
+    required TResult Function(String path) ktpImagePicked,
   }) {
     return submit();
   }
@@ -1315,13 +1169,17 @@ class _$SubmitImpl implements _Submit {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function(String path)? photoProfilePicked,
-    TResult? Function()? profileSaved,
-    TResult? Function()? addressSaved,
     TResult? Function()? loading,
     TResult? Function(String message)? error,
     TResult? Function(int index)? stepperToggled,
     TResult? Function()? submit,
     TResult? Function(UserMdl user)? profileLoaded,
+    TResult? Function(UserMdl user)? profileUpdated,
+    TResult? Function(AddressMdl address)? addressLoaded,
+    TResult? Function(AddressMdl address)? addressUpdated,
+    TResult? Function(CompanyMdl company)? companyLoaded,
+    TResult? Function(CompanyMdl company)? companyUpdated,
+    TResult? Function(String path)? ktpImagePicked,
   }) {
     return submit?.call();
   }
@@ -1331,13 +1189,17 @@ class _$SubmitImpl implements _Submit {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(String path)? photoProfilePicked,
-    TResult Function()? profileSaved,
-    TResult Function()? addressSaved,
     TResult Function()? loading,
     TResult Function(String message)? error,
     TResult Function(int index)? stepperToggled,
     TResult Function()? submit,
     TResult Function(UserMdl user)? profileLoaded,
+    TResult Function(UserMdl user)? profileUpdated,
+    TResult Function(AddressMdl address)? addressLoaded,
+    TResult Function(AddressMdl address)? addressUpdated,
+    TResult Function(CompanyMdl company)? companyLoaded,
+    TResult Function(CompanyMdl company)? companyUpdated,
+    TResult Function(String path)? ktpImagePicked,
     required TResult orElse(),
   }) {
     if (submit != null) {
@@ -1351,13 +1213,17 @@ class _$SubmitImpl implements _Submit {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_PhotoProfilePicked value) photoProfilePicked,
-    required TResult Function(_ProfileSaved value) profileSaved,
-    required TResult Function(_AddressSaved value) addressSaved,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Error value) error,
     required TResult Function(_StepperToggled value) stepperToggled,
     required TResult Function(_Submit value) submit,
     required TResult Function(_ProfileLoaded value) profileLoaded,
+    required TResult Function(_ProfileUpdated value) profileUpdated,
+    required TResult Function(_AddressLoaded value) addressLoaded,
+    required TResult Function(_AddressUpdated value) addressUpdated,
+    required TResult Function(_CompanyLoaded value) companyLoaded,
+    required TResult Function(_CompanyUpdated value) companyUpdated,
+    required TResult Function(_KtpImagePicked value) ktpImagePicked,
   }) {
     return submit(this);
   }
@@ -1367,13 +1233,17 @@ class _$SubmitImpl implements _Submit {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_PhotoProfilePicked value)? photoProfilePicked,
-    TResult? Function(_ProfileSaved value)? profileSaved,
-    TResult? Function(_AddressSaved value)? addressSaved,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Error value)? error,
     TResult? Function(_StepperToggled value)? stepperToggled,
     TResult? Function(_Submit value)? submit,
     TResult? Function(_ProfileLoaded value)? profileLoaded,
+    TResult? Function(_ProfileUpdated value)? profileUpdated,
+    TResult? Function(_AddressLoaded value)? addressLoaded,
+    TResult? Function(_AddressUpdated value)? addressUpdated,
+    TResult? Function(_CompanyLoaded value)? companyLoaded,
+    TResult? Function(_CompanyUpdated value)? companyUpdated,
+    TResult? Function(_KtpImagePicked value)? ktpImagePicked,
   }) {
     return submit?.call(this);
   }
@@ -1383,13 +1253,17 @@ class _$SubmitImpl implements _Submit {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_PhotoProfilePicked value)? photoProfilePicked,
-    TResult Function(_ProfileSaved value)? profileSaved,
-    TResult Function(_AddressSaved value)? addressSaved,
     TResult Function(_Loading value)? loading,
     TResult Function(_Error value)? error,
     TResult Function(_StepperToggled value)? stepperToggled,
     TResult Function(_Submit value)? submit,
     TResult Function(_ProfileLoaded value)? profileLoaded,
+    TResult Function(_ProfileUpdated value)? profileUpdated,
+    TResult Function(_AddressLoaded value)? addressLoaded,
+    TResult Function(_AddressUpdated value)? addressUpdated,
+    TResult Function(_CompanyLoaded value)? companyLoaded,
+    TResult Function(_CompanyUpdated value)? companyUpdated,
+    TResult Function(_KtpImagePicked value)? ktpImagePicked,
     required TResult orElse(),
   }) {
     if (submit != null) {
@@ -1485,13 +1359,17 @@ class _$ProfileLoadedImpl implements _ProfileLoaded {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function(String path) photoProfilePicked,
-    required TResult Function() profileSaved,
-    required TResult Function() addressSaved,
     required TResult Function() loading,
     required TResult Function(String message) error,
     required TResult Function(int index) stepperToggled,
     required TResult Function() submit,
     required TResult Function(UserMdl user) profileLoaded,
+    required TResult Function(UserMdl user) profileUpdated,
+    required TResult Function(AddressMdl address) addressLoaded,
+    required TResult Function(AddressMdl address) addressUpdated,
+    required TResult Function(CompanyMdl company) companyLoaded,
+    required TResult Function(CompanyMdl company) companyUpdated,
+    required TResult Function(String path) ktpImagePicked,
   }) {
     return profileLoaded(user);
   }
@@ -1501,13 +1379,17 @@ class _$ProfileLoadedImpl implements _ProfileLoaded {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function(String path)? photoProfilePicked,
-    TResult? Function()? profileSaved,
-    TResult? Function()? addressSaved,
     TResult? Function()? loading,
     TResult? Function(String message)? error,
     TResult? Function(int index)? stepperToggled,
     TResult? Function()? submit,
     TResult? Function(UserMdl user)? profileLoaded,
+    TResult? Function(UserMdl user)? profileUpdated,
+    TResult? Function(AddressMdl address)? addressLoaded,
+    TResult? Function(AddressMdl address)? addressUpdated,
+    TResult? Function(CompanyMdl company)? companyLoaded,
+    TResult? Function(CompanyMdl company)? companyUpdated,
+    TResult? Function(String path)? ktpImagePicked,
   }) {
     return profileLoaded?.call(user);
   }
@@ -1517,13 +1399,17 @@ class _$ProfileLoadedImpl implements _ProfileLoaded {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(String path)? photoProfilePicked,
-    TResult Function()? profileSaved,
-    TResult Function()? addressSaved,
     TResult Function()? loading,
     TResult Function(String message)? error,
     TResult Function(int index)? stepperToggled,
     TResult Function()? submit,
     TResult Function(UserMdl user)? profileLoaded,
+    TResult Function(UserMdl user)? profileUpdated,
+    TResult Function(AddressMdl address)? addressLoaded,
+    TResult Function(AddressMdl address)? addressUpdated,
+    TResult Function(CompanyMdl company)? companyLoaded,
+    TResult Function(CompanyMdl company)? companyUpdated,
+    TResult Function(String path)? ktpImagePicked,
     required TResult orElse(),
   }) {
     if (profileLoaded != null) {
@@ -1537,13 +1423,17 @@ class _$ProfileLoadedImpl implements _ProfileLoaded {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_PhotoProfilePicked value) photoProfilePicked,
-    required TResult Function(_ProfileSaved value) profileSaved,
-    required TResult Function(_AddressSaved value) addressSaved,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Error value) error,
     required TResult Function(_StepperToggled value) stepperToggled,
     required TResult Function(_Submit value) submit,
     required TResult Function(_ProfileLoaded value) profileLoaded,
+    required TResult Function(_ProfileUpdated value) profileUpdated,
+    required TResult Function(_AddressLoaded value) addressLoaded,
+    required TResult Function(_AddressUpdated value) addressUpdated,
+    required TResult Function(_CompanyLoaded value) companyLoaded,
+    required TResult Function(_CompanyUpdated value) companyUpdated,
+    required TResult Function(_KtpImagePicked value) ktpImagePicked,
   }) {
     return profileLoaded(this);
   }
@@ -1553,13 +1443,17 @@ class _$ProfileLoadedImpl implements _ProfileLoaded {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_PhotoProfilePicked value)? photoProfilePicked,
-    TResult? Function(_ProfileSaved value)? profileSaved,
-    TResult? Function(_AddressSaved value)? addressSaved,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Error value)? error,
     TResult? Function(_StepperToggled value)? stepperToggled,
     TResult? Function(_Submit value)? submit,
     TResult? Function(_ProfileLoaded value)? profileLoaded,
+    TResult? Function(_ProfileUpdated value)? profileUpdated,
+    TResult? Function(_AddressLoaded value)? addressLoaded,
+    TResult? Function(_AddressUpdated value)? addressUpdated,
+    TResult? Function(_CompanyLoaded value)? companyLoaded,
+    TResult? Function(_CompanyUpdated value)? companyUpdated,
+    TResult? Function(_KtpImagePicked value)? ktpImagePicked,
   }) {
     return profileLoaded?.call(this);
   }
@@ -1569,13 +1463,17 @@ class _$ProfileLoadedImpl implements _ProfileLoaded {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_PhotoProfilePicked value)? photoProfilePicked,
-    TResult Function(_ProfileSaved value)? profileSaved,
-    TResult Function(_AddressSaved value)? addressSaved,
     TResult Function(_Loading value)? loading,
     TResult Function(_Error value)? error,
     TResult Function(_StepperToggled value)? stepperToggled,
     TResult Function(_Submit value)? submit,
     TResult Function(_ProfileLoaded value)? profileLoaded,
+    TResult Function(_ProfileUpdated value)? profileUpdated,
+    TResult Function(_AddressLoaded value)? addressLoaded,
+    TResult Function(_AddressUpdated value)? addressUpdated,
+    TResult Function(_CompanyLoaded value)? companyLoaded,
+    TResult Function(_CompanyUpdated value)? companyUpdated,
+    TResult Function(_KtpImagePicked value)? ktpImagePicked,
     required TResult orElse(),
   }) {
     if (profileLoaded != null) {
@@ -1594,5 +1492,1307 @@ abstract class _ProfileLoaded implements ProfileState {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ProfileLoadedImplCopyWith<_$ProfileLoadedImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ProfileUpdatedImplCopyWith<$Res> {
+  factory _$$ProfileUpdatedImplCopyWith(_$ProfileUpdatedImpl value,
+          $Res Function(_$ProfileUpdatedImpl) then) =
+      __$$ProfileUpdatedImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({UserMdl user});
+
+  $UserMdlCopyWith<$Res> get user;
+}
+
+/// @nodoc
+class __$$ProfileUpdatedImplCopyWithImpl<$Res>
+    extends _$ProfileStateCopyWithImpl<$Res, _$ProfileUpdatedImpl>
+    implements _$$ProfileUpdatedImplCopyWith<$Res> {
+  __$$ProfileUpdatedImplCopyWithImpl(
+      _$ProfileUpdatedImpl _value, $Res Function(_$ProfileUpdatedImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of ProfileState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? user = null,
+  }) {
+    return _then(_$ProfileUpdatedImpl(
+      null == user
+          ? _value.user
+          : user // ignore: cast_nullable_to_non_nullable
+              as UserMdl,
+    ));
+  }
+
+  /// Create a copy of ProfileState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $UserMdlCopyWith<$Res> get user {
+    return $UserMdlCopyWith<$Res>(_value.user, (value) {
+      return _then(_value.copyWith(user: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$ProfileUpdatedImpl implements _ProfileUpdated {
+  const _$ProfileUpdatedImpl(this.user);
+
+  @override
+  final UserMdl user;
+
+  @override
+  String toString() {
+    return 'ProfileState.profileUpdated(user: $user)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ProfileUpdatedImpl &&
+            (identical(other.user, user) || other.user == user));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, user);
+
+  /// Create a copy of ProfileState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ProfileUpdatedImplCopyWith<_$ProfileUpdatedImpl> get copyWith =>
+      __$$ProfileUpdatedImplCopyWithImpl<_$ProfileUpdatedImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(String path) photoProfilePicked,
+    required TResult Function() loading,
+    required TResult Function(String message) error,
+    required TResult Function(int index) stepperToggled,
+    required TResult Function() submit,
+    required TResult Function(UserMdl user) profileLoaded,
+    required TResult Function(UserMdl user) profileUpdated,
+    required TResult Function(AddressMdl address) addressLoaded,
+    required TResult Function(AddressMdl address) addressUpdated,
+    required TResult Function(CompanyMdl company) companyLoaded,
+    required TResult Function(CompanyMdl company) companyUpdated,
+    required TResult Function(String path) ktpImagePicked,
+  }) {
+    return profileUpdated(user);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(String path)? photoProfilePicked,
+    TResult? Function()? loading,
+    TResult? Function(String message)? error,
+    TResult? Function(int index)? stepperToggled,
+    TResult? Function()? submit,
+    TResult? Function(UserMdl user)? profileLoaded,
+    TResult? Function(UserMdl user)? profileUpdated,
+    TResult? Function(AddressMdl address)? addressLoaded,
+    TResult? Function(AddressMdl address)? addressUpdated,
+    TResult? Function(CompanyMdl company)? companyLoaded,
+    TResult? Function(CompanyMdl company)? companyUpdated,
+    TResult? Function(String path)? ktpImagePicked,
+  }) {
+    return profileUpdated?.call(user);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(String path)? photoProfilePicked,
+    TResult Function()? loading,
+    TResult Function(String message)? error,
+    TResult Function(int index)? stepperToggled,
+    TResult Function()? submit,
+    TResult Function(UserMdl user)? profileLoaded,
+    TResult Function(UserMdl user)? profileUpdated,
+    TResult Function(AddressMdl address)? addressLoaded,
+    TResult Function(AddressMdl address)? addressUpdated,
+    TResult Function(CompanyMdl company)? companyLoaded,
+    TResult Function(CompanyMdl company)? companyUpdated,
+    TResult Function(String path)? ktpImagePicked,
+    required TResult orElse(),
+  }) {
+    if (profileUpdated != null) {
+      return profileUpdated(user);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_PhotoProfilePicked value) photoProfilePicked,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Error value) error,
+    required TResult Function(_StepperToggled value) stepperToggled,
+    required TResult Function(_Submit value) submit,
+    required TResult Function(_ProfileLoaded value) profileLoaded,
+    required TResult Function(_ProfileUpdated value) profileUpdated,
+    required TResult Function(_AddressLoaded value) addressLoaded,
+    required TResult Function(_AddressUpdated value) addressUpdated,
+    required TResult Function(_CompanyLoaded value) companyLoaded,
+    required TResult Function(_CompanyUpdated value) companyUpdated,
+    required TResult Function(_KtpImagePicked value) ktpImagePicked,
+  }) {
+    return profileUpdated(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_PhotoProfilePicked value)? photoProfilePicked,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_Error value)? error,
+    TResult? Function(_StepperToggled value)? stepperToggled,
+    TResult? Function(_Submit value)? submit,
+    TResult? Function(_ProfileLoaded value)? profileLoaded,
+    TResult? Function(_ProfileUpdated value)? profileUpdated,
+    TResult? Function(_AddressLoaded value)? addressLoaded,
+    TResult? Function(_AddressUpdated value)? addressUpdated,
+    TResult? Function(_CompanyLoaded value)? companyLoaded,
+    TResult? Function(_CompanyUpdated value)? companyUpdated,
+    TResult? Function(_KtpImagePicked value)? ktpImagePicked,
+  }) {
+    return profileUpdated?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_PhotoProfilePicked value)? photoProfilePicked,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Error value)? error,
+    TResult Function(_StepperToggled value)? stepperToggled,
+    TResult Function(_Submit value)? submit,
+    TResult Function(_ProfileLoaded value)? profileLoaded,
+    TResult Function(_ProfileUpdated value)? profileUpdated,
+    TResult Function(_AddressLoaded value)? addressLoaded,
+    TResult Function(_AddressUpdated value)? addressUpdated,
+    TResult Function(_CompanyLoaded value)? companyLoaded,
+    TResult Function(_CompanyUpdated value)? companyUpdated,
+    TResult Function(_KtpImagePicked value)? ktpImagePicked,
+    required TResult orElse(),
+  }) {
+    if (profileUpdated != null) {
+      return profileUpdated(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ProfileUpdated implements ProfileState {
+  const factory _ProfileUpdated(final UserMdl user) = _$ProfileUpdatedImpl;
+
+  UserMdl get user;
+
+  /// Create a copy of ProfileState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ProfileUpdatedImplCopyWith<_$ProfileUpdatedImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$AddressLoadedImplCopyWith<$Res> {
+  factory _$$AddressLoadedImplCopyWith(
+          _$AddressLoadedImpl value, $Res Function(_$AddressLoadedImpl) then) =
+      __$$AddressLoadedImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({AddressMdl address});
+
+  $AddressMdlCopyWith<$Res> get address;
+}
+
+/// @nodoc
+class __$$AddressLoadedImplCopyWithImpl<$Res>
+    extends _$ProfileStateCopyWithImpl<$Res, _$AddressLoadedImpl>
+    implements _$$AddressLoadedImplCopyWith<$Res> {
+  __$$AddressLoadedImplCopyWithImpl(
+      _$AddressLoadedImpl _value, $Res Function(_$AddressLoadedImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of ProfileState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? address = null,
+  }) {
+    return _then(_$AddressLoadedImpl(
+      null == address
+          ? _value.address
+          : address // ignore: cast_nullable_to_non_nullable
+              as AddressMdl,
+    ));
+  }
+
+  /// Create a copy of ProfileState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $AddressMdlCopyWith<$Res> get address {
+    return $AddressMdlCopyWith<$Res>(_value.address, (value) {
+      return _then(_value.copyWith(address: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$AddressLoadedImpl implements _AddressLoaded {
+  const _$AddressLoadedImpl(this.address);
+
+  @override
+  final AddressMdl address;
+
+  @override
+  String toString() {
+    return 'ProfileState.addressLoaded(address: $address)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AddressLoadedImpl &&
+            (identical(other.address, address) || other.address == address));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, address);
+
+  /// Create a copy of ProfileState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AddressLoadedImplCopyWith<_$AddressLoadedImpl> get copyWith =>
+      __$$AddressLoadedImplCopyWithImpl<_$AddressLoadedImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(String path) photoProfilePicked,
+    required TResult Function() loading,
+    required TResult Function(String message) error,
+    required TResult Function(int index) stepperToggled,
+    required TResult Function() submit,
+    required TResult Function(UserMdl user) profileLoaded,
+    required TResult Function(UserMdl user) profileUpdated,
+    required TResult Function(AddressMdl address) addressLoaded,
+    required TResult Function(AddressMdl address) addressUpdated,
+    required TResult Function(CompanyMdl company) companyLoaded,
+    required TResult Function(CompanyMdl company) companyUpdated,
+    required TResult Function(String path) ktpImagePicked,
+  }) {
+    return addressLoaded(address);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(String path)? photoProfilePicked,
+    TResult? Function()? loading,
+    TResult? Function(String message)? error,
+    TResult? Function(int index)? stepperToggled,
+    TResult? Function()? submit,
+    TResult? Function(UserMdl user)? profileLoaded,
+    TResult? Function(UserMdl user)? profileUpdated,
+    TResult? Function(AddressMdl address)? addressLoaded,
+    TResult? Function(AddressMdl address)? addressUpdated,
+    TResult? Function(CompanyMdl company)? companyLoaded,
+    TResult? Function(CompanyMdl company)? companyUpdated,
+    TResult? Function(String path)? ktpImagePicked,
+  }) {
+    return addressLoaded?.call(address);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(String path)? photoProfilePicked,
+    TResult Function()? loading,
+    TResult Function(String message)? error,
+    TResult Function(int index)? stepperToggled,
+    TResult Function()? submit,
+    TResult Function(UserMdl user)? profileLoaded,
+    TResult Function(UserMdl user)? profileUpdated,
+    TResult Function(AddressMdl address)? addressLoaded,
+    TResult Function(AddressMdl address)? addressUpdated,
+    TResult Function(CompanyMdl company)? companyLoaded,
+    TResult Function(CompanyMdl company)? companyUpdated,
+    TResult Function(String path)? ktpImagePicked,
+    required TResult orElse(),
+  }) {
+    if (addressLoaded != null) {
+      return addressLoaded(address);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_PhotoProfilePicked value) photoProfilePicked,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Error value) error,
+    required TResult Function(_StepperToggled value) stepperToggled,
+    required TResult Function(_Submit value) submit,
+    required TResult Function(_ProfileLoaded value) profileLoaded,
+    required TResult Function(_ProfileUpdated value) profileUpdated,
+    required TResult Function(_AddressLoaded value) addressLoaded,
+    required TResult Function(_AddressUpdated value) addressUpdated,
+    required TResult Function(_CompanyLoaded value) companyLoaded,
+    required TResult Function(_CompanyUpdated value) companyUpdated,
+    required TResult Function(_KtpImagePicked value) ktpImagePicked,
+  }) {
+    return addressLoaded(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_PhotoProfilePicked value)? photoProfilePicked,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_Error value)? error,
+    TResult? Function(_StepperToggled value)? stepperToggled,
+    TResult? Function(_Submit value)? submit,
+    TResult? Function(_ProfileLoaded value)? profileLoaded,
+    TResult? Function(_ProfileUpdated value)? profileUpdated,
+    TResult? Function(_AddressLoaded value)? addressLoaded,
+    TResult? Function(_AddressUpdated value)? addressUpdated,
+    TResult? Function(_CompanyLoaded value)? companyLoaded,
+    TResult? Function(_CompanyUpdated value)? companyUpdated,
+    TResult? Function(_KtpImagePicked value)? ktpImagePicked,
+  }) {
+    return addressLoaded?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_PhotoProfilePicked value)? photoProfilePicked,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Error value)? error,
+    TResult Function(_StepperToggled value)? stepperToggled,
+    TResult Function(_Submit value)? submit,
+    TResult Function(_ProfileLoaded value)? profileLoaded,
+    TResult Function(_ProfileUpdated value)? profileUpdated,
+    TResult Function(_AddressLoaded value)? addressLoaded,
+    TResult Function(_AddressUpdated value)? addressUpdated,
+    TResult Function(_CompanyLoaded value)? companyLoaded,
+    TResult Function(_CompanyUpdated value)? companyUpdated,
+    TResult Function(_KtpImagePicked value)? ktpImagePicked,
+    required TResult orElse(),
+  }) {
+    if (addressLoaded != null) {
+      return addressLoaded(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _AddressLoaded implements ProfileState {
+  const factory _AddressLoaded(final AddressMdl address) = _$AddressLoadedImpl;
+
+  AddressMdl get address;
+
+  /// Create a copy of ProfileState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$AddressLoadedImplCopyWith<_$AddressLoadedImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$AddressUpdatedImplCopyWith<$Res> {
+  factory _$$AddressUpdatedImplCopyWith(_$AddressUpdatedImpl value,
+          $Res Function(_$AddressUpdatedImpl) then) =
+      __$$AddressUpdatedImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({AddressMdl address});
+
+  $AddressMdlCopyWith<$Res> get address;
+}
+
+/// @nodoc
+class __$$AddressUpdatedImplCopyWithImpl<$Res>
+    extends _$ProfileStateCopyWithImpl<$Res, _$AddressUpdatedImpl>
+    implements _$$AddressUpdatedImplCopyWith<$Res> {
+  __$$AddressUpdatedImplCopyWithImpl(
+      _$AddressUpdatedImpl _value, $Res Function(_$AddressUpdatedImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of ProfileState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? address = null,
+  }) {
+    return _then(_$AddressUpdatedImpl(
+      null == address
+          ? _value.address
+          : address // ignore: cast_nullable_to_non_nullable
+              as AddressMdl,
+    ));
+  }
+
+  /// Create a copy of ProfileState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $AddressMdlCopyWith<$Res> get address {
+    return $AddressMdlCopyWith<$Res>(_value.address, (value) {
+      return _then(_value.copyWith(address: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$AddressUpdatedImpl implements _AddressUpdated {
+  const _$AddressUpdatedImpl(this.address);
+
+  @override
+  final AddressMdl address;
+
+  @override
+  String toString() {
+    return 'ProfileState.addressUpdated(address: $address)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AddressUpdatedImpl &&
+            (identical(other.address, address) || other.address == address));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, address);
+
+  /// Create a copy of ProfileState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AddressUpdatedImplCopyWith<_$AddressUpdatedImpl> get copyWith =>
+      __$$AddressUpdatedImplCopyWithImpl<_$AddressUpdatedImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(String path) photoProfilePicked,
+    required TResult Function() loading,
+    required TResult Function(String message) error,
+    required TResult Function(int index) stepperToggled,
+    required TResult Function() submit,
+    required TResult Function(UserMdl user) profileLoaded,
+    required TResult Function(UserMdl user) profileUpdated,
+    required TResult Function(AddressMdl address) addressLoaded,
+    required TResult Function(AddressMdl address) addressUpdated,
+    required TResult Function(CompanyMdl company) companyLoaded,
+    required TResult Function(CompanyMdl company) companyUpdated,
+    required TResult Function(String path) ktpImagePicked,
+  }) {
+    return addressUpdated(address);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(String path)? photoProfilePicked,
+    TResult? Function()? loading,
+    TResult? Function(String message)? error,
+    TResult? Function(int index)? stepperToggled,
+    TResult? Function()? submit,
+    TResult? Function(UserMdl user)? profileLoaded,
+    TResult? Function(UserMdl user)? profileUpdated,
+    TResult? Function(AddressMdl address)? addressLoaded,
+    TResult? Function(AddressMdl address)? addressUpdated,
+    TResult? Function(CompanyMdl company)? companyLoaded,
+    TResult? Function(CompanyMdl company)? companyUpdated,
+    TResult? Function(String path)? ktpImagePicked,
+  }) {
+    return addressUpdated?.call(address);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(String path)? photoProfilePicked,
+    TResult Function()? loading,
+    TResult Function(String message)? error,
+    TResult Function(int index)? stepperToggled,
+    TResult Function()? submit,
+    TResult Function(UserMdl user)? profileLoaded,
+    TResult Function(UserMdl user)? profileUpdated,
+    TResult Function(AddressMdl address)? addressLoaded,
+    TResult Function(AddressMdl address)? addressUpdated,
+    TResult Function(CompanyMdl company)? companyLoaded,
+    TResult Function(CompanyMdl company)? companyUpdated,
+    TResult Function(String path)? ktpImagePicked,
+    required TResult orElse(),
+  }) {
+    if (addressUpdated != null) {
+      return addressUpdated(address);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_PhotoProfilePicked value) photoProfilePicked,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Error value) error,
+    required TResult Function(_StepperToggled value) stepperToggled,
+    required TResult Function(_Submit value) submit,
+    required TResult Function(_ProfileLoaded value) profileLoaded,
+    required TResult Function(_ProfileUpdated value) profileUpdated,
+    required TResult Function(_AddressLoaded value) addressLoaded,
+    required TResult Function(_AddressUpdated value) addressUpdated,
+    required TResult Function(_CompanyLoaded value) companyLoaded,
+    required TResult Function(_CompanyUpdated value) companyUpdated,
+    required TResult Function(_KtpImagePicked value) ktpImagePicked,
+  }) {
+    return addressUpdated(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_PhotoProfilePicked value)? photoProfilePicked,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_Error value)? error,
+    TResult? Function(_StepperToggled value)? stepperToggled,
+    TResult? Function(_Submit value)? submit,
+    TResult? Function(_ProfileLoaded value)? profileLoaded,
+    TResult? Function(_ProfileUpdated value)? profileUpdated,
+    TResult? Function(_AddressLoaded value)? addressLoaded,
+    TResult? Function(_AddressUpdated value)? addressUpdated,
+    TResult? Function(_CompanyLoaded value)? companyLoaded,
+    TResult? Function(_CompanyUpdated value)? companyUpdated,
+    TResult? Function(_KtpImagePicked value)? ktpImagePicked,
+  }) {
+    return addressUpdated?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_PhotoProfilePicked value)? photoProfilePicked,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Error value)? error,
+    TResult Function(_StepperToggled value)? stepperToggled,
+    TResult Function(_Submit value)? submit,
+    TResult Function(_ProfileLoaded value)? profileLoaded,
+    TResult Function(_ProfileUpdated value)? profileUpdated,
+    TResult Function(_AddressLoaded value)? addressLoaded,
+    TResult Function(_AddressUpdated value)? addressUpdated,
+    TResult Function(_CompanyLoaded value)? companyLoaded,
+    TResult Function(_CompanyUpdated value)? companyUpdated,
+    TResult Function(_KtpImagePicked value)? ktpImagePicked,
+    required TResult orElse(),
+  }) {
+    if (addressUpdated != null) {
+      return addressUpdated(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _AddressUpdated implements ProfileState {
+  const factory _AddressUpdated(final AddressMdl address) =
+      _$AddressUpdatedImpl;
+
+  AddressMdl get address;
+
+  /// Create a copy of ProfileState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$AddressUpdatedImplCopyWith<_$AddressUpdatedImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$CompanyLoadedImplCopyWith<$Res> {
+  factory _$$CompanyLoadedImplCopyWith(
+          _$CompanyLoadedImpl value, $Res Function(_$CompanyLoadedImpl) then) =
+      __$$CompanyLoadedImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({CompanyMdl company});
+
+  $CompanyMdlCopyWith<$Res> get company;
+}
+
+/// @nodoc
+class __$$CompanyLoadedImplCopyWithImpl<$Res>
+    extends _$ProfileStateCopyWithImpl<$Res, _$CompanyLoadedImpl>
+    implements _$$CompanyLoadedImplCopyWith<$Res> {
+  __$$CompanyLoadedImplCopyWithImpl(
+      _$CompanyLoadedImpl _value, $Res Function(_$CompanyLoadedImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of ProfileState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? company = null,
+  }) {
+    return _then(_$CompanyLoadedImpl(
+      null == company
+          ? _value.company
+          : company // ignore: cast_nullable_to_non_nullable
+              as CompanyMdl,
+    ));
+  }
+
+  /// Create a copy of ProfileState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $CompanyMdlCopyWith<$Res> get company {
+    return $CompanyMdlCopyWith<$Res>(_value.company, (value) {
+      return _then(_value.copyWith(company: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$CompanyLoadedImpl implements _CompanyLoaded {
+  const _$CompanyLoadedImpl(this.company);
+
+  @override
+  final CompanyMdl company;
+
+  @override
+  String toString() {
+    return 'ProfileState.companyLoaded(company: $company)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$CompanyLoadedImpl &&
+            (identical(other.company, company) || other.company == company));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, company);
+
+  /// Create a copy of ProfileState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$CompanyLoadedImplCopyWith<_$CompanyLoadedImpl> get copyWith =>
+      __$$CompanyLoadedImplCopyWithImpl<_$CompanyLoadedImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(String path) photoProfilePicked,
+    required TResult Function() loading,
+    required TResult Function(String message) error,
+    required TResult Function(int index) stepperToggled,
+    required TResult Function() submit,
+    required TResult Function(UserMdl user) profileLoaded,
+    required TResult Function(UserMdl user) profileUpdated,
+    required TResult Function(AddressMdl address) addressLoaded,
+    required TResult Function(AddressMdl address) addressUpdated,
+    required TResult Function(CompanyMdl company) companyLoaded,
+    required TResult Function(CompanyMdl company) companyUpdated,
+    required TResult Function(String path) ktpImagePicked,
+  }) {
+    return companyLoaded(company);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(String path)? photoProfilePicked,
+    TResult? Function()? loading,
+    TResult? Function(String message)? error,
+    TResult? Function(int index)? stepperToggled,
+    TResult? Function()? submit,
+    TResult? Function(UserMdl user)? profileLoaded,
+    TResult? Function(UserMdl user)? profileUpdated,
+    TResult? Function(AddressMdl address)? addressLoaded,
+    TResult? Function(AddressMdl address)? addressUpdated,
+    TResult? Function(CompanyMdl company)? companyLoaded,
+    TResult? Function(CompanyMdl company)? companyUpdated,
+    TResult? Function(String path)? ktpImagePicked,
+  }) {
+    return companyLoaded?.call(company);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(String path)? photoProfilePicked,
+    TResult Function()? loading,
+    TResult Function(String message)? error,
+    TResult Function(int index)? stepperToggled,
+    TResult Function()? submit,
+    TResult Function(UserMdl user)? profileLoaded,
+    TResult Function(UserMdl user)? profileUpdated,
+    TResult Function(AddressMdl address)? addressLoaded,
+    TResult Function(AddressMdl address)? addressUpdated,
+    TResult Function(CompanyMdl company)? companyLoaded,
+    TResult Function(CompanyMdl company)? companyUpdated,
+    TResult Function(String path)? ktpImagePicked,
+    required TResult orElse(),
+  }) {
+    if (companyLoaded != null) {
+      return companyLoaded(company);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_PhotoProfilePicked value) photoProfilePicked,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Error value) error,
+    required TResult Function(_StepperToggled value) stepperToggled,
+    required TResult Function(_Submit value) submit,
+    required TResult Function(_ProfileLoaded value) profileLoaded,
+    required TResult Function(_ProfileUpdated value) profileUpdated,
+    required TResult Function(_AddressLoaded value) addressLoaded,
+    required TResult Function(_AddressUpdated value) addressUpdated,
+    required TResult Function(_CompanyLoaded value) companyLoaded,
+    required TResult Function(_CompanyUpdated value) companyUpdated,
+    required TResult Function(_KtpImagePicked value) ktpImagePicked,
+  }) {
+    return companyLoaded(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_PhotoProfilePicked value)? photoProfilePicked,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_Error value)? error,
+    TResult? Function(_StepperToggled value)? stepperToggled,
+    TResult? Function(_Submit value)? submit,
+    TResult? Function(_ProfileLoaded value)? profileLoaded,
+    TResult? Function(_ProfileUpdated value)? profileUpdated,
+    TResult? Function(_AddressLoaded value)? addressLoaded,
+    TResult? Function(_AddressUpdated value)? addressUpdated,
+    TResult? Function(_CompanyLoaded value)? companyLoaded,
+    TResult? Function(_CompanyUpdated value)? companyUpdated,
+    TResult? Function(_KtpImagePicked value)? ktpImagePicked,
+  }) {
+    return companyLoaded?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_PhotoProfilePicked value)? photoProfilePicked,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Error value)? error,
+    TResult Function(_StepperToggled value)? stepperToggled,
+    TResult Function(_Submit value)? submit,
+    TResult Function(_ProfileLoaded value)? profileLoaded,
+    TResult Function(_ProfileUpdated value)? profileUpdated,
+    TResult Function(_AddressLoaded value)? addressLoaded,
+    TResult Function(_AddressUpdated value)? addressUpdated,
+    TResult Function(_CompanyLoaded value)? companyLoaded,
+    TResult Function(_CompanyUpdated value)? companyUpdated,
+    TResult Function(_KtpImagePicked value)? ktpImagePicked,
+    required TResult orElse(),
+  }) {
+    if (companyLoaded != null) {
+      return companyLoaded(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _CompanyLoaded implements ProfileState {
+  const factory _CompanyLoaded(final CompanyMdl company) = _$CompanyLoadedImpl;
+
+  CompanyMdl get company;
+
+  /// Create a copy of ProfileState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$CompanyLoadedImplCopyWith<_$CompanyLoadedImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$CompanyUpdatedImplCopyWith<$Res> {
+  factory _$$CompanyUpdatedImplCopyWith(_$CompanyUpdatedImpl value,
+          $Res Function(_$CompanyUpdatedImpl) then) =
+      __$$CompanyUpdatedImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({CompanyMdl company});
+
+  $CompanyMdlCopyWith<$Res> get company;
+}
+
+/// @nodoc
+class __$$CompanyUpdatedImplCopyWithImpl<$Res>
+    extends _$ProfileStateCopyWithImpl<$Res, _$CompanyUpdatedImpl>
+    implements _$$CompanyUpdatedImplCopyWith<$Res> {
+  __$$CompanyUpdatedImplCopyWithImpl(
+      _$CompanyUpdatedImpl _value, $Res Function(_$CompanyUpdatedImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of ProfileState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? company = null,
+  }) {
+    return _then(_$CompanyUpdatedImpl(
+      null == company
+          ? _value.company
+          : company // ignore: cast_nullable_to_non_nullable
+              as CompanyMdl,
+    ));
+  }
+
+  /// Create a copy of ProfileState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $CompanyMdlCopyWith<$Res> get company {
+    return $CompanyMdlCopyWith<$Res>(_value.company, (value) {
+      return _then(_value.copyWith(company: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$CompanyUpdatedImpl implements _CompanyUpdated {
+  const _$CompanyUpdatedImpl(this.company);
+
+  @override
+  final CompanyMdl company;
+
+  @override
+  String toString() {
+    return 'ProfileState.companyUpdated(company: $company)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$CompanyUpdatedImpl &&
+            (identical(other.company, company) || other.company == company));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, company);
+
+  /// Create a copy of ProfileState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$CompanyUpdatedImplCopyWith<_$CompanyUpdatedImpl> get copyWith =>
+      __$$CompanyUpdatedImplCopyWithImpl<_$CompanyUpdatedImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(String path) photoProfilePicked,
+    required TResult Function() loading,
+    required TResult Function(String message) error,
+    required TResult Function(int index) stepperToggled,
+    required TResult Function() submit,
+    required TResult Function(UserMdl user) profileLoaded,
+    required TResult Function(UserMdl user) profileUpdated,
+    required TResult Function(AddressMdl address) addressLoaded,
+    required TResult Function(AddressMdl address) addressUpdated,
+    required TResult Function(CompanyMdl company) companyLoaded,
+    required TResult Function(CompanyMdl company) companyUpdated,
+    required TResult Function(String path) ktpImagePicked,
+  }) {
+    return companyUpdated(company);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(String path)? photoProfilePicked,
+    TResult? Function()? loading,
+    TResult? Function(String message)? error,
+    TResult? Function(int index)? stepperToggled,
+    TResult? Function()? submit,
+    TResult? Function(UserMdl user)? profileLoaded,
+    TResult? Function(UserMdl user)? profileUpdated,
+    TResult? Function(AddressMdl address)? addressLoaded,
+    TResult? Function(AddressMdl address)? addressUpdated,
+    TResult? Function(CompanyMdl company)? companyLoaded,
+    TResult? Function(CompanyMdl company)? companyUpdated,
+    TResult? Function(String path)? ktpImagePicked,
+  }) {
+    return companyUpdated?.call(company);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(String path)? photoProfilePicked,
+    TResult Function()? loading,
+    TResult Function(String message)? error,
+    TResult Function(int index)? stepperToggled,
+    TResult Function()? submit,
+    TResult Function(UserMdl user)? profileLoaded,
+    TResult Function(UserMdl user)? profileUpdated,
+    TResult Function(AddressMdl address)? addressLoaded,
+    TResult Function(AddressMdl address)? addressUpdated,
+    TResult Function(CompanyMdl company)? companyLoaded,
+    TResult Function(CompanyMdl company)? companyUpdated,
+    TResult Function(String path)? ktpImagePicked,
+    required TResult orElse(),
+  }) {
+    if (companyUpdated != null) {
+      return companyUpdated(company);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_PhotoProfilePicked value) photoProfilePicked,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Error value) error,
+    required TResult Function(_StepperToggled value) stepperToggled,
+    required TResult Function(_Submit value) submit,
+    required TResult Function(_ProfileLoaded value) profileLoaded,
+    required TResult Function(_ProfileUpdated value) profileUpdated,
+    required TResult Function(_AddressLoaded value) addressLoaded,
+    required TResult Function(_AddressUpdated value) addressUpdated,
+    required TResult Function(_CompanyLoaded value) companyLoaded,
+    required TResult Function(_CompanyUpdated value) companyUpdated,
+    required TResult Function(_KtpImagePicked value) ktpImagePicked,
+  }) {
+    return companyUpdated(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_PhotoProfilePicked value)? photoProfilePicked,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_Error value)? error,
+    TResult? Function(_StepperToggled value)? stepperToggled,
+    TResult? Function(_Submit value)? submit,
+    TResult? Function(_ProfileLoaded value)? profileLoaded,
+    TResult? Function(_ProfileUpdated value)? profileUpdated,
+    TResult? Function(_AddressLoaded value)? addressLoaded,
+    TResult? Function(_AddressUpdated value)? addressUpdated,
+    TResult? Function(_CompanyLoaded value)? companyLoaded,
+    TResult? Function(_CompanyUpdated value)? companyUpdated,
+    TResult? Function(_KtpImagePicked value)? ktpImagePicked,
+  }) {
+    return companyUpdated?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_PhotoProfilePicked value)? photoProfilePicked,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Error value)? error,
+    TResult Function(_StepperToggled value)? stepperToggled,
+    TResult Function(_Submit value)? submit,
+    TResult Function(_ProfileLoaded value)? profileLoaded,
+    TResult Function(_ProfileUpdated value)? profileUpdated,
+    TResult Function(_AddressLoaded value)? addressLoaded,
+    TResult Function(_AddressUpdated value)? addressUpdated,
+    TResult Function(_CompanyLoaded value)? companyLoaded,
+    TResult Function(_CompanyUpdated value)? companyUpdated,
+    TResult Function(_KtpImagePicked value)? ktpImagePicked,
+    required TResult orElse(),
+  }) {
+    if (companyUpdated != null) {
+      return companyUpdated(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _CompanyUpdated implements ProfileState {
+  const factory _CompanyUpdated(final CompanyMdl company) =
+      _$CompanyUpdatedImpl;
+
+  CompanyMdl get company;
+
+  /// Create a copy of ProfileState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$CompanyUpdatedImplCopyWith<_$CompanyUpdatedImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$KtpImagePickedImplCopyWith<$Res> {
+  factory _$$KtpImagePickedImplCopyWith(_$KtpImagePickedImpl value,
+          $Res Function(_$KtpImagePickedImpl) then) =
+      __$$KtpImagePickedImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String path});
+}
+
+/// @nodoc
+class __$$KtpImagePickedImplCopyWithImpl<$Res>
+    extends _$ProfileStateCopyWithImpl<$Res, _$KtpImagePickedImpl>
+    implements _$$KtpImagePickedImplCopyWith<$Res> {
+  __$$KtpImagePickedImplCopyWithImpl(
+      _$KtpImagePickedImpl _value, $Res Function(_$KtpImagePickedImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of ProfileState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? path = null,
+  }) {
+    return _then(_$KtpImagePickedImpl(
+      null == path
+          ? _value.path
+          : path // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$KtpImagePickedImpl implements _KtpImagePicked {
+  const _$KtpImagePickedImpl(this.path);
+
+  @override
+  final String path;
+
+  @override
+  String toString() {
+    return 'ProfileState.ktpImagePicked(path: $path)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$KtpImagePickedImpl &&
+            (identical(other.path, path) || other.path == path));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, path);
+
+  /// Create a copy of ProfileState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$KtpImagePickedImplCopyWith<_$KtpImagePickedImpl> get copyWith =>
+      __$$KtpImagePickedImplCopyWithImpl<_$KtpImagePickedImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(String path) photoProfilePicked,
+    required TResult Function() loading,
+    required TResult Function(String message) error,
+    required TResult Function(int index) stepperToggled,
+    required TResult Function() submit,
+    required TResult Function(UserMdl user) profileLoaded,
+    required TResult Function(UserMdl user) profileUpdated,
+    required TResult Function(AddressMdl address) addressLoaded,
+    required TResult Function(AddressMdl address) addressUpdated,
+    required TResult Function(CompanyMdl company) companyLoaded,
+    required TResult Function(CompanyMdl company) companyUpdated,
+    required TResult Function(String path) ktpImagePicked,
+  }) {
+    return ktpImagePicked(path);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(String path)? photoProfilePicked,
+    TResult? Function()? loading,
+    TResult? Function(String message)? error,
+    TResult? Function(int index)? stepperToggled,
+    TResult? Function()? submit,
+    TResult? Function(UserMdl user)? profileLoaded,
+    TResult? Function(UserMdl user)? profileUpdated,
+    TResult? Function(AddressMdl address)? addressLoaded,
+    TResult? Function(AddressMdl address)? addressUpdated,
+    TResult? Function(CompanyMdl company)? companyLoaded,
+    TResult? Function(CompanyMdl company)? companyUpdated,
+    TResult? Function(String path)? ktpImagePicked,
+  }) {
+    return ktpImagePicked?.call(path);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(String path)? photoProfilePicked,
+    TResult Function()? loading,
+    TResult Function(String message)? error,
+    TResult Function(int index)? stepperToggled,
+    TResult Function()? submit,
+    TResult Function(UserMdl user)? profileLoaded,
+    TResult Function(UserMdl user)? profileUpdated,
+    TResult Function(AddressMdl address)? addressLoaded,
+    TResult Function(AddressMdl address)? addressUpdated,
+    TResult Function(CompanyMdl company)? companyLoaded,
+    TResult Function(CompanyMdl company)? companyUpdated,
+    TResult Function(String path)? ktpImagePicked,
+    required TResult orElse(),
+  }) {
+    if (ktpImagePicked != null) {
+      return ktpImagePicked(path);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_PhotoProfilePicked value) photoProfilePicked,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Error value) error,
+    required TResult Function(_StepperToggled value) stepperToggled,
+    required TResult Function(_Submit value) submit,
+    required TResult Function(_ProfileLoaded value) profileLoaded,
+    required TResult Function(_ProfileUpdated value) profileUpdated,
+    required TResult Function(_AddressLoaded value) addressLoaded,
+    required TResult Function(_AddressUpdated value) addressUpdated,
+    required TResult Function(_CompanyLoaded value) companyLoaded,
+    required TResult Function(_CompanyUpdated value) companyUpdated,
+    required TResult Function(_KtpImagePicked value) ktpImagePicked,
+  }) {
+    return ktpImagePicked(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_PhotoProfilePicked value)? photoProfilePicked,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_Error value)? error,
+    TResult? Function(_StepperToggled value)? stepperToggled,
+    TResult? Function(_Submit value)? submit,
+    TResult? Function(_ProfileLoaded value)? profileLoaded,
+    TResult? Function(_ProfileUpdated value)? profileUpdated,
+    TResult? Function(_AddressLoaded value)? addressLoaded,
+    TResult? Function(_AddressUpdated value)? addressUpdated,
+    TResult? Function(_CompanyLoaded value)? companyLoaded,
+    TResult? Function(_CompanyUpdated value)? companyUpdated,
+    TResult? Function(_KtpImagePicked value)? ktpImagePicked,
+  }) {
+    return ktpImagePicked?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_PhotoProfilePicked value)? photoProfilePicked,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Error value)? error,
+    TResult Function(_StepperToggled value)? stepperToggled,
+    TResult Function(_Submit value)? submit,
+    TResult Function(_ProfileLoaded value)? profileLoaded,
+    TResult Function(_ProfileUpdated value)? profileUpdated,
+    TResult Function(_AddressLoaded value)? addressLoaded,
+    TResult Function(_AddressUpdated value)? addressUpdated,
+    TResult Function(_CompanyLoaded value)? companyLoaded,
+    TResult Function(_CompanyUpdated value)? companyUpdated,
+    TResult Function(_KtpImagePicked value)? ktpImagePicked,
+    required TResult orElse(),
+  }) {
+    if (ktpImagePicked != null) {
+      return ktpImagePicked(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _KtpImagePicked implements ProfileState {
+  const factory _KtpImagePicked(final String path) = _$KtpImagePickedImpl;
+
+  String get path;
+
+  /// Create a copy of ProfileState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KtpImagePickedImplCopyWith<_$KtpImagePickedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

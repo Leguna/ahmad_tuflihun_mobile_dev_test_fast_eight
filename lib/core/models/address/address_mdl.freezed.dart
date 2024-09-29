@@ -28,6 +28,7 @@ mixin _$AddressMdl {
   String? get kecamatan => throw _privateConstructorUsedError;
   String? get kelurahan => throw _privateConstructorUsedError;
   String? get postalCode => throw _privateConstructorUsedError;
+  String? get imageKtp => throw _privateConstructorUsedError;
 
   /// Serializes this AddressMdl to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -53,7 +54,8 @@ abstract class $AddressMdlCopyWith<$Res> {
       String? kota,
       String? kecamatan,
       String? kelurahan,
-      String? postalCode});
+      String? postalCode,
+      String? imageKtp});
 }
 
 /// @nodoc
@@ -79,6 +81,7 @@ class _$AddressMdlCopyWithImpl<$Res, $Val extends AddressMdl>
     Object? kecamatan = freezed,
     Object? kelurahan = freezed,
     Object? postalCode = freezed,
+    Object? imageKtp = freezed,
   }) {
     return _then(_value.copyWith(
       ktp: freezed == ktp
@@ -113,6 +116,10 @@ class _$AddressMdlCopyWithImpl<$Res, $Val extends AddressMdl>
           ? _value.postalCode
           : postalCode // ignore: cast_nullable_to_non_nullable
               as String?,
+      imageKtp: freezed == imageKtp
+          ? _value.imageKtp
+          : imageKtp // ignore: cast_nullable_to_non_nullable
+              as String?,
     ) as $Val);
   }
 }
@@ -133,7 +140,8 @@ abstract class _$$AddressMdlImplCopyWith<$Res>
       String? kota,
       String? kecamatan,
       String? kelurahan,
-      String? postalCode});
+      String? postalCode,
+      String? imageKtp});
 }
 
 /// @nodoc
@@ -157,6 +165,7 @@ class __$$AddressMdlImplCopyWithImpl<$Res>
     Object? kecamatan = freezed,
     Object? kelurahan = freezed,
     Object? postalCode = freezed,
+    Object? imageKtp = freezed,
   }) {
     return _then(_$AddressMdlImpl(
       ktp: freezed == ktp
@@ -191,13 +200,17 @@ class __$$AddressMdlImplCopyWithImpl<$Res>
           ? _value.postalCode
           : postalCode // ignore: cast_nullable_to_non_nullable
               as String?,
+      imageKtp: freezed == imageKtp
+          ? _value.imageKtp
+          : imageKtp // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$AddressMdlImpl implements _AddressMdl {
+class _$AddressMdlImpl extends _AddressMdl {
   const _$AddressMdlImpl(
       {this.ktp = '',
       this.nik = '',
@@ -206,7 +219,9 @@ class _$AddressMdlImpl implements _AddressMdl {
       this.kota = '',
       this.kecamatan = '',
       this.kelurahan = '',
-      this.postalCode = ''});
+      this.postalCode = '',
+      this.imageKtp = ''})
+      : super._();
 
   factory _$AddressMdlImpl.fromJson(Map<String, dynamic> json) =>
       _$$AddressMdlImplFromJson(json);
@@ -235,10 +250,13 @@ class _$AddressMdlImpl implements _AddressMdl {
   @override
   @JsonKey()
   final String? postalCode;
+  @override
+  @JsonKey()
+  final String? imageKtp;
 
   @override
   String toString() {
-    return 'AddressMdl(ktp: $ktp, nik: $nik, address: $address, province: $province, kota: $kota, kecamatan: $kecamatan, kelurahan: $kelurahan, postalCode: $postalCode)';
+    return 'AddressMdl(ktp: $ktp, nik: $nik, address: $address, province: $province, kota: $kota, kecamatan: $kecamatan, kelurahan: $kelurahan, postalCode: $postalCode, imageKtp: $imageKtp)';
   }
 
   @override
@@ -257,13 +275,15 @@ class _$AddressMdlImpl implements _AddressMdl {
             (identical(other.kelurahan, kelurahan) ||
                 other.kelurahan == kelurahan) &&
             (identical(other.postalCode, postalCode) ||
-                other.postalCode == postalCode));
+                other.postalCode == postalCode) &&
+            (identical(other.imageKtp, imageKtp) ||
+                other.imageKtp == imageKtp));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, ktp, nik, address, province,
-      kota, kecamatan, kelurahan, postalCode);
+      kota, kecamatan, kelurahan, postalCode, imageKtp);
 
   /// Create a copy of AddressMdl
   /// with the given fields replaced by the non-null parameter values.
@@ -281,7 +301,7 @@ class _$AddressMdlImpl implements _AddressMdl {
   }
 }
 
-abstract class _AddressMdl implements AddressMdl {
+abstract class _AddressMdl extends AddressMdl {
   const factory _AddressMdl(
       {final String? ktp,
       final String? nik,
@@ -290,7 +310,9 @@ abstract class _AddressMdl implements AddressMdl {
       final String? kota,
       final String? kecamatan,
       final String? kelurahan,
-      final String? postalCode}) = _$AddressMdlImpl;
+      final String? postalCode,
+      final String? imageKtp}) = _$AddressMdlImpl;
+  const _AddressMdl._() : super._();
 
   factory _AddressMdl.fromJson(Map<String, dynamic> json) =
       _$AddressMdlImpl.fromJson;
@@ -311,6 +333,8 @@ abstract class _AddressMdl implements AddressMdl {
   String? get kelurahan;
   @override
   String? get postalCode;
+  @override
+  String? get imageKtp;
 
   /// Create a copy of AddressMdl
   /// with the given fields replaced by the non-null parameter values.

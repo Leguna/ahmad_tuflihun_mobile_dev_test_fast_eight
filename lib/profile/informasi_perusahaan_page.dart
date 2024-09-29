@@ -7,12 +7,17 @@ class InformasiPerusahaanPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
-      children: [
-        Placeholder(),
-        SizedBox(height: 16.0),
-        ProfileStepperButton(),
-      ],
+    return  const Padding(
+      padding: EdgeInsets.all(16.0),
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            Placeholder(),
+            SizedBox(height: 16.0),
+            ProfileStepperButton(),
+          ],
+        ),
+      ),
     );
   }
 }

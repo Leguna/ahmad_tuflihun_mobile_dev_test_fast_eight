@@ -223,7 +223,7 @@ class __$$CompanyMdlImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$CompanyMdlImpl implements _CompanyMdl {
+class _$CompanyMdlImpl extends _CompanyMdl {
   const _$CompanyMdlImpl(
       {this.name = '',
       this.address = '',
@@ -234,7 +234,8 @@ class _$CompanyMdlImpl implements _CompanyMdl {
       this.bankName = '',
       this.bankBranch = '',
       this.bankAccount = '',
-      this.bankAccountName = ''});
+      this.bankAccountName = ''})
+      : super._();
 
   factory _$CompanyMdlImpl.fromJson(Map<String, dynamic> json) =>
       _$$CompanyMdlImplFromJson(json);
@@ -330,7 +331,7 @@ class _$CompanyMdlImpl implements _CompanyMdl {
   }
 }
 
-abstract class _CompanyMdl implements CompanyMdl {
+abstract class _CompanyMdl extends CompanyMdl {
   const factory _CompanyMdl(
       {final String? name,
       final String? address,
@@ -342,6 +343,7 @@ abstract class _CompanyMdl implements CompanyMdl {
       final String? bankBranch,
       final String? bankAccount,
       final String? bankAccountName}) = _$CompanyMdlImpl;
+  const _CompanyMdl._() : super._();
 
   factory _CompanyMdl.fromJson(Map<String, dynamic> json) =
       _$CompanyMdlImpl.fromJson;

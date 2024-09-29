@@ -28,9 +28,9 @@ class WishlistWidget extends StatelessWidget {
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Text(
+                const Text(
                   Strings.wishlist,
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontSize: 16.0,
                     color: Colors.black,
                   ),

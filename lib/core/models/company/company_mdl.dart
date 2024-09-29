@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'company_mdl.freezed.dart';
@@ -5,6 +7,8 @@ part 'company_mdl.g.dart';
 
 @freezed
 class CompanyMdl with _$CompanyMdl {
+  const CompanyMdl._();
+
   const factory CompanyMdl({
     @Default('') String? name,
     @Default('') String? address,
@@ -20,4 +24,9 @@ class CompanyMdl with _$CompanyMdl {
 
   factory CompanyMdl.fromJson(Map<String, dynamic> json) =>
       _$CompanyMdlFromJson(json);
+
+  factory CompanyMdl.fromJsonString(String jsonString) =>
+      CompanyMdl.fromJson(json.decode(jsonString));
+
+  String toJsonString() => json.encode(toJson());
 }

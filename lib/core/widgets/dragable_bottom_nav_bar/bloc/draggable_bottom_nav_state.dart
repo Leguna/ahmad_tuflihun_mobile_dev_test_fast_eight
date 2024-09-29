@@ -6,4 +6,5 @@ class DraggableBottomNavState with _$DraggableBottomNavState {
   const factory DraggableBottomNavState.expanded() = _Expanded;
   const factory DraggableBottomNavState.collapsed() = _Collapsed;
   const factory DraggableBottomNavState.selected({required int index}) = _Selected;
+  const factory DraggableBottomNavState.sizeChanged() = _SizeChanged;
 }

@@ -41,7 +41,7 @@ class AppTextStyles {
   );
 
   static TextStyle titleHome = poppins.copyWith(
-    fontSize: 26.0,
+    fontSize: 22.0,
     letterSpacing: 1.0,
     fontWeight: FontWeight.bold,
   );
@@ -72,8 +72,9 @@ class AppTextStyles {
   );
 
   static var price = poppins.copyWith(
-    fontSize: 14.0,
-    color: Colors.black
+    fontSize: 16.0,
+    color: Colors.black,
+    fontWeight: FontWeight.bold,
   );
 
 }

@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 import '../core/index.dart';
-import '../core/models/user/user_mdl.dart';
 import '../core/widgets/app_bar/app_bar_cubit.dart';
 import '../profile/bloc/profile_cubit.dart';
 import 'explore_wellness_widget.dart';
@@ -17,8 +16,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final homeCubit = context.read<HomeCubit>();
-    homeCubit.refreshController = RefreshController();
+    final refreshController = RefreshController(initialRefresh: false);
     return BlocBuilder<ProfileCubit, ProfileState>(
       builder: (context, state) {
         final avatarPath = context.select((ProfileCubit cubit) => cubit.user.image);
@@ -97,34 +95,40 @@ class HomePage extends StatelessWidget {
           ),
           body: BlocBuilder<HomeCubit, HomeState>(
             builder: (context, state) {
-              return SingleChildScrollView(
-                child: ConstrainedBox(
-                  constraints: BoxConstraints(
-                    minHeight: MediaQuery.of(context).size.height - 100,
-                  ),
-                  child: Container(
-                    width: double.infinity,
-                    decoration: const BoxDecoration(
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(20.0),
-                        topRight: Radius.circular(20.0),
-                      ),
-                      color: Colors.white,
+              return SmartRefresher(
+                controller: refreshController,
+                onRefresh: () async {
+                  refreshController.refreshCompleted();
+                },
+                child: SingleChildScrollView(
+                  child: ConstrainedBox(
+                    constraints: BoxConstraints(
+                      minHeight: MediaQuery.of(context).size.height - 100,
                     ),
-                    child: const Padding(
-                      padding:
-                          EdgeInsets.symmetric(horizontal: 16.0, vertical: 8),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          SizedBox(height: 16.0),
-                          ProdukKeuangan(),
-                          SizedBox(height: 16.0),
-                          KategoriPilihan(),
-                          SizedBox(height: 16.0),
-                          ExploreWellness(),
-                          SizedBox(height: 128.0),
-                        ],
+                    child: Container(
+                      width: double.infinity,
+                      decoration: const BoxDecoration(
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(20.0),
+                          topRight: Radius.circular(20.0),
+                        ),
+                        color: Colors.white,
+                      ),
+                      child: const Padding(
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 16.0, vertical: 8),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            SizedBox(height: 16.0),
+                            ProdukKeuangan(),
+                            SizedBox(height: 16.0),
+                            KategoriPilihan(),
+                            SizedBox(height: 16.0),
+                            ExploreWellness(),
+                            SizedBox(height: 128.0),
+                          ],
+                        ),
                       ),
                     ),
                   ),

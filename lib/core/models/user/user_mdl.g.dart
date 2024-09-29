@@ -15,7 +15,7 @@ _$UserMdlImpl _$$UserMdlImplFromJson(Map<String, dynamic> json) =>
       phone: json['phone'] as String? ?? '',
       address: json['address'] as String? ?? '',
       birthDate: json['birthDate'] as String? ?? '',
-      gender: json['gender'] as String? ?? '',
+      gender: json['gender'] as String? ?? 'Laki-laki',
       image: json['image'] as String? ?? '',
       role: json['role'] as String? ?? '',
       education: json['education'] as String? ?? '',

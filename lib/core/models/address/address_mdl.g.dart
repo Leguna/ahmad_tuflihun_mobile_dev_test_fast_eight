@@ -16,6 +16,7 @@ _$AddressMdlImpl _$$AddressMdlImplFromJson(Map<String, dynamic> json) =>
       kecamatan: json['kecamatan'] as String? ?? '',
       kelurahan: json['kelurahan'] as String? ?? '',
       postalCode: json['postalCode'] as String? ?? '',
+      imageKtp: json['imageKtp'] as String? ?? '',
     );
 
 Map<String, dynamic> _$$AddressMdlImplToJson(_$AddressMdlImpl instance) =>
@@ -28,4 +29,5 @@ Map<String, dynamic> _$$AddressMdlImplToJson(_$AddressMdlImpl instance) =>
       'kecamatan': instance.kecamatan,
       'kelurahan': instance.kelurahan,
       'postalCode': instance.postalCode,
+      'imageKtp': instance.imageKtp,
     };

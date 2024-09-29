@@ -20,7 +20,10 @@ String getFormattedDateCompact(DateTime? dateTime) {
   return formatter.format(dateTime);
 }
 
-DateTime getDateTime(String date) {
+DateTime getDateTime(String? date) {
+  if (date == null || date.isEmpty) {
+    return DateTime.now();
+  }
   final List<String> dateList = date.split(' ');
   final int day = int.parse(dateList[0]);
   final int month = getMonthNumber(dateList[1]);
@@ -30,6 +33,13 @@ DateTime getDateTime(String date) {
 
 String changeTextToPath(String text) {
   return text.replaceAll('/', '-');
+}
+
+String getFileName(String? path) {
+  if (path == null) {
+    return '';
+  }
+  return path.split('/').last;
 }
 
 String removeFileExtension(String fileName) {
@@ -219,3 +229,4 @@ String formatMoney(num money) {
   );
   return formatter.format(money);
 }
+

@@ -10,14 +10,16 @@ class DraggableBottomNavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const minChildSize = 0.14;
-    const maxChildSize = 0.4;
-    final DraggableScrollableController draggableScrollableController =
+    const maxChildSize = 0.45;
+    final DraggableScrollableController controller =
         DraggableScrollableController();
-    draggableScrollableController.addListener(() {
-      if (draggableScrollableController.size <= minChildSize) {
-        context.read<DraggableBottomNavCubit>().collapse();
-      } else if (draggableScrollableController.size == maxChildSize) {
+    controller.addListener(() {
+      final size = controller.size;
+      context.read<DraggableBottomNavCubit>().setSize(size);
+      if (controller.size == maxChildSize) {
         context.read<DraggableBottomNavCubit>().expand();
+      } else if (controller.size == minChildSize) {
+        context.read<DraggableBottomNavCubit>().collapse();
       }
     });
     return Stack(
@@ -26,17 +28,13 @@ class DraggableBottomNavBar extends StatelessWidget {
         BlocBuilder<DraggableBottomNavCubit, DraggableBottomNavState>(
           builder: (context, state) {
             return IgnorePointer(
-              ignoring: state.maybeWhen(
-                expanded: () => false,
-                collapsed: () => true,
-                orElse: () => true,
-              ),
+              ignoring: context
+                  .select((DraggableBottomNavCubit cubit) => !cubit.isExpanded),
               child: AnimatedOpacity(
-                duration: const Duration(milliseconds: 500),
-                opacity: state.maybeWhen(
-                  expanded: () => 0.5,
-                  collapsed: () => 0.0,
-                  orElse: () => 0.0,
+                duration: const Duration(milliseconds: 200),
+                opacity: context.select(
+                  (DraggableBottomNavCubit cubit) =>
+                      cubit.isExpanded ? 0.5 : 0.0,
                 ),
                 child: GestureDetector(
                   onTap: () {
@@ -53,7 +51,7 @@ class DraggableBottomNavBar extends StatelessWidget {
           },
         ),
         DraggableScrollableSheet(
-          controller: draggableScrollableController,
+          controller: controller,
           initialChildSize: minChildSize,
           minChildSize: minChildSize,
           maxChildSize: maxChildSize,
@@ -66,14 +64,14 @@ class DraggableBottomNavBar extends StatelessWidget {
                 listener: (context, state) {
                   state.maybeWhen(
                     expanded: () {
-                      draggableScrollableController.animateTo(
+                      controller.animateTo(
                         maxChildSize,
                         duration: const Duration(milliseconds: 250),
                         curve: Curves.easeInOut,
                       );
                     },
                     collapsed: () {
-                      draggableScrollableController.animateTo(
+                      controller.animateTo(
                         minChildSize,
                         duration: const Duration(milliseconds: 250),
                         curve: Curves.easeInOut,
@@ -106,7 +104,8 @@ class DraggableBottomNavBar extends StatelessWidget {
                           ),
                         ),
                       ),
-                      DraggableBottomNavBarContent(scrollController: scrollController),
+                      DraggableBottomNavBarContent(
+                          scrollController: scrollController),
                       Positioned(
                         top: 0.0,
                         child: Container(
@@ -125,19 +124,11 @@ class DraggableBottomNavBar extends StatelessWidget {
                           onTap: () {
                             c.toggle();
                           },
-                          child: state.maybeWhen(
-                            expanded: () => const Icon(
-                              Icons.keyboard_arrow_down,
-                              size: 40.0,
-                            ),
-                            collapsed: () => const Icon(
-                              Icons.keyboard_arrow_up,
-                              size: 40.0,
-                            ),
-                            orElse: () => const Icon(
-                              Icons.keyboard_arrow_up,
-                              size: 40.0,
-                            ),
+                          child: Icon(
+                            !c.isExpanded
+                                ? Icons.keyboard_arrow_up
+                                :Icons.keyboard_arrow_down,
+                            size: 40.0,
                           ),
                         ),
                       ),

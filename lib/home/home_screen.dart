@@ -3,6 +3,7 @@ import 'package:ahmad_tuflihun_mobile_dev_test_fast_eight/core/widgets/not_found
 import 'package:flutter/material.dart';
 
 import '../core/widgets/dragable_bottom_nav_bar/bloc/draggable_bottom_nav_cubit.dart';
+import '../core/widgets/dragable_bottom_nav_bar/draggable_bottom_nav_bar.dart';
 import 'home_page.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -24,6 +25,7 @@ class HomeScreen extends StatelessWidget {
           },
           builder: (context, state) {
             return PageView(
+              physics: const NeverScrollableScrollPhysics(),
               controller: pageController,
               children: const [
                 HomePage(),
@@ -40,8 +42,7 @@ class HomeScreen extends StatelessWidget {
             );
           },
         ),
-        // TODO: Add DraggableBottomNavBar
-        // const DraggableBottomNavBar(),
+        const DraggableBottomNavBar(),
       ],
     );
   }

@@ -33,7 +33,6 @@ class DraggableBottomNavBarContent extends StatelessWidget {
         ),
         child: SingleChildScrollView(
           controller: scrollController,
-          physics: const NeverScrollableScrollPhysics(),
           child: Padding(
             padding: const EdgeInsets.all(32.0),
             child: ItemMenuList(

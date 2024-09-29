@@ -22,6 +22,7 @@ mixin _$DraggableBottomNavState {
     required TResult Function() expanded,
     required TResult Function() collapsed,
     required TResult Function(int index) selected,
+    required TResult Function() sizeChanged,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -30,6 +31,7 @@ mixin _$DraggableBottomNavState {
     TResult? Function()? expanded,
     TResult? Function()? collapsed,
     TResult? Function(int index)? selected,
+    TResult? Function()? sizeChanged,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -38,6 +40,7 @@ mixin _$DraggableBottomNavState {
     TResult Function()? expanded,
     TResult Function()? collapsed,
     TResult Function(int index)? selected,
+    TResult Function()? sizeChanged,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -47,6 +50,7 @@ mixin _$DraggableBottomNavState {
     required TResult Function(_Expanded value) expanded,
     required TResult Function(_Collapsed value) collapsed,
     required TResult Function(_Selected value) selected,
+    required TResult Function(_SizeChanged value) sizeChanged,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -55,6 +59,7 @@ mixin _$DraggableBottomNavState {
     TResult? Function(_Expanded value)? expanded,
     TResult? Function(_Collapsed value)? collapsed,
     TResult? Function(_Selected value)? selected,
+    TResult? Function(_SizeChanged value)? sizeChanged,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -63,6 +68,7 @@ mixin _$DraggableBottomNavState {
     TResult Function(_Expanded value)? expanded,
     TResult Function(_Collapsed value)? collapsed,
     TResult Function(_Selected value)? selected,
+    TResult Function(_SizeChanged value)? sizeChanged,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -135,6 +141,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function() expanded,
     required TResult Function() collapsed,
     required TResult Function(int index) selected,
+    required TResult Function() sizeChanged,
   }) {
     return initial();
   }
@@ -146,6 +153,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? expanded,
     TResult? Function()? collapsed,
     TResult? Function(int index)? selected,
+    TResult? Function()? sizeChanged,
   }) {
     return initial?.call();
   }
@@ -157,6 +165,7 @@ class _$InitialImpl implements _Initial {
     TResult Function()? expanded,
     TResult Function()? collapsed,
     TResult Function(int index)? selected,
+    TResult Function()? sizeChanged,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -172,6 +181,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function(_Expanded value) expanded,
     required TResult Function(_Collapsed value) collapsed,
     required TResult Function(_Selected value) selected,
+    required TResult Function(_SizeChanged value) sizeChanged,
   }) {
     return initial(this);
   }
@@ -183,6 +193,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function(_Expanded value)? expanded,
     TResult? Function(_Collapsed value)? collapsed,
     TResult? Function(_Selected value)? selected,
+    TResult? Function(_SizeChanged value)? sizeChanged,
   }) {
     return initial?.call(this);
   }
@@ -194,6 +205,7 @@ class _$InitialImpl implements _Initial {
     TResult Function(_Expanded value)? expanded,
     TResult Function(_Collapsed value)? collapsed,
     TResult Function(_Selected value)? selected,
+    TResult Function(_SizeChanged value)? sizeChanged,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -252,6 +264,7 @@ class _$ExpandedImpl implements _Expanded {
     required TResult Function() expanded,
     required TResult Function() collapsed,
     required TResult Function(int index) selected,
+    required TResult Function() sizeChanged,
   }) {
     return expanded();
   }
@@ -263,6 +276,7 @@ class _$ExpandedImpl implements _Expanded {
     TResult? Function()? expanded,
     TResult? Function()? collapsed,
     TResult? Function(int index)? selected,
+    TResult? Function()? sizeChanged,
   }) {
     return expanded?.call();
   }
@@ -274,6 +288,7 @@ class _$ExpandedImpl implements _Expanded {
     TResult Function()? expanded,
     TResult Function()? collapsed,
     TResult Function(int index)? selected,
+    TResult Function()? sizeChanged,
     required TResult orElse(),
   }) {
     if (expanded != null) {
@@ -289,6 +304,7 @@ class _$ExpandedImpl implements _Expanded {
     required TResult Function(_Expanded value) expanded,
     required TResult Function(_Collapsed value) collapsed,
     required TResult Function(_Selected value) selected,
+    required TResult Function(_SizeChanged value) sizeChanged,
   }) {
     return expanded(this);
   }
@@ -300,6 +316,7 @@ class _$ExpandedImpl implements _Expanded {
     TResult? Function(_Expanded value)? expanded,
     TResult? Function(_Collapsed value)? collapsed,
     TResult? Function(_Selected value)? selected,
+    TResult? Function(_SizeChanged value)? sizeChanged,
   }) {
     return expanded?.call(this);
   }
@@ -311,6 +328,7 @@ class _$ExpandedImpl implements _Expanded {
     TResult Function(_Expanded value)? expanded,
     TResult Function(_Collapsed value)? collapsed,
     TResult Function(_Selected value)? selected,
+    TResult Function(_SizeChanged value)? sizeChanged,
     required TResult orElse(),
   }) {
     if (expanded != null) {
@@ -369,6 +387,7 @@ class _$CollapsedImpl implements _Collapsed {
     required TResult Function() expanded,
     required TResult Function() collapsed,
     required TResult Function(int index) selected,
+    required TResult Function() sizeChanged,
   }) {
     return collapsed();
   }
@@ -380,6 +399,7 @@ class _$CollapsedImpl implements _Collapsed {
     TResult? Function()? expanded,
     TResult? Function()? collapsed,
     TResult? Function(int index)? selected,
+    TResult? Function()? sizeChanged,
   }) {
     return collapsed?.call();
   }
@@ -391,6 +411,7 @@ class _$CollapsedImpl implements _Collapsed {
     TResult Function()? expanded,
     TResult Function()? collapsed,
     TResult Function(int index)? selected,
+    TResult Function()? sizeChanged,
     required TResult orElse(),
   }) {
     if (collapsed != null) {
@@ -406,6 +427,7 @@ class _$CollapsedImpl implements _Collapsed {
     required TResult Function(_Expanded value) expanded,
     required TResult Function(_Collapsed value) collapsed,
     required TResult Function(_Selected value) selected,
+    required TResult Function(_SizeChanged value) sizeChanged,
   }) {
     return collapsed(this);
   }
@@ -417,6 +439,7 @@ class _$CollapsedImpl implements _Collapsed {
     TResult? Function(_Expanded value)? expanded,
     TResult? Function(_Collapsed value)? collapsed,
     TResult? Function(_Selected value)? selected,
+    TResult? Function(_SizeChanged value)? sizeChanged,
   }) {
     return collapsed?.call(this);
   }
@@ -428,6 +451,7 @@ class _$CollapsedImpl implements _Collapsed {
     TResult Function(_Expanded value)? expanded,
     TResult Function(_Collapsed value)? collapsed,
     TResult Function(_Selected value)? selected,
+    TResult Function(_SizeChanged value)? sizeChanged,
     required TResult orElse(),
   }) {
     if (collapsed != null) {
@@ -513,6 +537,7 @@ class _$SelectedImpl implements _Selected {
     required TResult Function() expanded,
     required TResult Function() collapsed,
     required TResult Function(int index) selected,
+    required TResult Function() sizeChanged,
   }) {
     return selected(index);
   }
@@ -524,6 +549,7 @@ class _$SelectedImpl implements _Selected {
     TResult? Function()? expanded,
     TResult? Function()? collapsed,
     TResult? Function(int index)? selected,
+    TResult? Function()? sizeChanged,
   }) {
     return selected?.call(index);
   }
@@ -535,6 +561,7 @@ class _$SelectedImpl implements _Selected {
     TResult Function()? expanded,
     TResult Function()? collapsed,
     TResult Function(int index)? selected,
+    TResult Function()? sizeChanged,
     required TResult orElse(),
   }) {
     if (selected != null) {
@@ -550,6 +577,7 @@ class _$SelectedImpl implements _Selected {
     required TResult Function(_Expanded value) expanded,
     required TResult Function(_Collapsed value) collapsed,
     required TResult Function(_Selected value) selected,
+    required TResult Function(_SizeChanged value) sizeChanged,
   }) {
     return selected(this);
   }
@@ -561,6 +589,7 @@ class _$SelectedImpl implements _Selected {
     TResult? Function(_Expanded value)? expanded,
     TResult? Function(_Collapsed value)? collapsed,
     TResult? Function(_Selected value)? selected,
+    TResult? Function(_SizeChanged value)? sizeChanged,
   }) {
     return selected?.call(this);
   }
@@ -572,6 +601,7 @@ class _$SelectedImpl implements _Selected {
     TResult Function(_Expanded value)? expanded,
     TResult Function(_Collapsed value)? collapsed,
     TResult Function(_Selected value)? selected,
+    TResult Function(_SizeChanged value)? sizeChanged,
     required TResult orElse(),
   }) {
     if (selected != null) {
@@ -591,4 +621,127 @@ abstract class _Selected implements DraggableBottomNavState {
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SelectedImplCopyWith<_$SelectedImpl> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$SizeChangedImplCopyWith<$Res> {
+  factory _$$SizeChangedImplCopyWith(
+          _$SizeChangedImpl value, $Res Function(_$SizeChangedImpl) then) =
+      __$$SizeChangedImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$SizeChangedImplCopyWithImpl<$Res>
+    extends _$DraggableBottomNavStateCopyWithImpl<$Res, _$SizeChangedImpl>
+    implements _$$SizeChangedImplCopyWith<$Res> {
+  __$$SizeChangedImplCopyWithImpl(
+      _$SizeChangedImpl _value, $Res Function(_$SizeChangedImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of DraggableBottomNavState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$SizeChangedImpl implements _SizeChanged {
+  const _$SizeChangedImpl();
+
+  @override
+  String toString() {
+    return 'DraggableBottomNavState.sizeChanged()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$SizeChangedImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() expanded,
+    required TResult Function() collapsed,
+    required TResult Function(int index) selected,
+    required TResult Function() sizeChanged,
+  }) {
+    return sizeChanged();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? expanded,
+    TResult? Function()? collapsed,
+    TResult? Function(int index)? selected,
+    TResult? Function()? sizeChanged,
+  }) {
+    return sizeChanged?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? expanded,
+    TResult Function()? collapsed,
+    TResult Function(int index)? selected,
+    TResult Function()? sizeChanged,
+    required TResult orElse(),
+  }) {
+    if (sizeChanged != null) {
+      return sizeChanged();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Expanded value) expanded,
+    required TResult Function(_Collapsed value) collapsed,
+    required TResult Function(_Selected value) selected,
+    required TResult Function(_SizeChanged value) sizeChanged,
+  }) {
+    return sizeChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_Expanded value)? expanded,
+    TResult? Function(_Collapsed value)? collapsed,
+    TResult? Function(_Selected value)? selected,
+    TResult? Function(_SizeChanged value)? sizeChanged,
+  }) {
+    return sizeChanged?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Expanded value)? expanded,
+    TResult Function(_Collapsed value)? collapsed,
+    TResult Function(_Selected value)? selected,
+    TResult Function(_SizeChanged value)? sizeChanged,
+    required TResult orElse(),
+  }) {
+    if (sizeChanged != null) {
+      return sizeChanged(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _SizeChanged implements DraggableBottomNavState {
+  const factory _SizeChanged() = _$SizeChangedImpl;
 }

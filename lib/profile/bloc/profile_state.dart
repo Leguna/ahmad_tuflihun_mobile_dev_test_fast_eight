@@ -28,4 +28,6 @@ class ProfileState with _$ProfileState {
 
   const factory ProfileState.companyUpdated(CompanyMdl company) =
       _CompanyUpdated;
+
+  const factory ProfileState.ktpImagePicked(String path) = _KtpImagePicked;
 }

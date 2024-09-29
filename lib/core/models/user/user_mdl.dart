@@ -17,7 +17,7 @@ class UserMdl with _$UserMdl {
     @Default('') String? phone,
     @Default('') String? address,
     @Default('') String? birthDate,
-    @Default('') String? gender,
+    @Default('Laki-laki') String? gender,
     @Default('') String? image,
     @Default('') String? role,
     @Default('') String? education,

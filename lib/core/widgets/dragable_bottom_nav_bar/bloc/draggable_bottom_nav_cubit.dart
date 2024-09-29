@@ -8,26 +8,28 @@ class DraggableBottomNavCubit extends Cubit<DraggableBottomNavState> {
   DraggableBottomNavCubit() : super(const DraggableBottomNavState.initial());
   bool isExpanded = false;
   int selectedIndex = 0;
+  double size = 0.14;
+
+  void setSize(double newSize) {
+    size = newSize;
+    emit(const DraggableBottomNavState.sizeChanged());
+  }
 
   void expand() {
-    emit(const DraggableBottomNavState.initial());
     isExpanded = true;
     emit(const DraggableBottomNavState.expanded());
   }
 
   void collapse() {
-    emit(const DraggableBottomNavState.initial());
     isExpanded = false;
     emit(const DraggableBottomNavState.collapsed());
   }
 
   void toggle() {
-    emit(const DraggableBottomNavState.initial());
-    isExpanded = !isExpanded;
     if (isExpanded) {
-      emit(const DraggableBottomNavState.expanded());
+      collapse();
     } else {
-      emit(const DraggableBottomNavState.collapsed());
+      expand();
     }
   }
 

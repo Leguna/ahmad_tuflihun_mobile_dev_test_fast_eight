@@ -17,11 +17,11 @@ Future<void> main() async {
     statusBarIconBrightness: Brightness.dark,
   ));
   runApp(const MyApp());
-
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
@@ -29,7 +29,8 @@ class MyApp extends StatelessWidget {
         BlocProvider<AppBarCubit>(create: (context) => AppBarCubit()),
         BlocProvider<ProfileCubit>(create: (context) => ProfileCubit()),
         BlocProvider<HomeCubit>(create: (context) => HomeCubit()),
-        BlocProvider<DraggableBottomNavCubit>(create: (context) => DraggableBottomNavCubit()),
+        BlocProvider<DraggableBottomNavCubit>(
+            create: (context) => DraggableBottomNavCubit()),
       ],
       child: MaterialApp(
         title: Strings.appName,
@@ -45,7 +46,44 @@ class MyApp extends StatelessWidget {
             backgroundColor: AppColors.primaryColor,
             surfaceTintColor: Colors.black,
           ),
-          inputDecorationTheme: defaultInputTheme,
+          dropdownMenuTheme: const DropdownMenuThemeData(
+            textStyle: TextStyle(
+              color: Colors.black,
+              fontSize: 12.0,
+            ),
+          ),
+          inputDecorationTheme: defaultInputTheme.copyWith(
+            labelStyle: const TextStyle(color: Colors.black),
+            hintStyle: const TextStyle(color: Colors.black),
+            focusedBorder: const OutlineInputBorder(
+              borderSide: BorderSide(
+                color: AppColors.primaryColor,
+                width: 2.0,
+              ),
+            ),
+            errorBorder: const OutlineInputBorder(
+              borderSide: BorderSide(
+                color: Colors.red,
+                width: 1.0,
+              ),
+            ),
+            errorStyle: const TextStyle(
+              color: Colors.red,
+              fontSize: 12.0,
+            ),
+            disabledBorder: const OutlineInputBorder(
+              borderSide: BorderSide(
+                color: Colors.grey,
+                width: 1.0,
+              ),
+            ),
+            enabledBorder: const OutlineInputBorder(
+              borderSide: BorderSide(
+                color: AppColors.primaryColor,
+                width: 1.0,
+              ),
+            ),
+          ),
           textSelectionTheme: const TextSelectionThemeData(
             selectionColor: AppColors.primaryColor,
             cursorColor: AppColors.primaryColor,
@@ -64,6 +102,16 @@ class MyApp extends StatelessWidget {
           textTheme: const TextTheme(
             bodyMedium: TextStyle(
               fontSize: 16.0,
+              fontWeight: FontWeight.w400,
+              color: Colors.black,
+            ),
+            titleMedium: TextStyle(
+              fontSize: 18.0,
+              fontWeight: FontWeight.w400,
+              color: Colors.black,
+            ),
+            bodyLarge: TextStyle(
+              fontSize: 18.0,
               fontWeight: FontWeight.w400,
               color: Colors.black,
             ),
